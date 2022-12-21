@@ -28,8 +28,8 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  akermania
 
 # Build settings
-#theme: jekyll-theme-clean-blog
-remote-theme: startBootstrap/startbootstrap-clean-blog-jekyll
+theme: jekyll-theme-clean-blog
+#remote-theme: startbootstrap/startbootstrap-clean-blog-jekyll
 
 plugins:
   - jekyll-feed
