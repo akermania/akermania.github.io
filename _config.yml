@@ -29,12 +29,13 @@ github_username:  akermania
 
 # Build settings
 #theme: jekyll-theme-clean-blog
-remote-theme: StartBootstrap/startbootstrap-clean-blog-jekyll
+remote_theme: "startbootstrap/startbootstrap-clean-blog-jekyll"
 
 plugins:
   - jekyll-feed
   - jekyll-paginate
   - jekyll-remote-theme
+  - jekyll-include-cache
 
 # Exclude from processing.
 # The following items will not be processed, by default.
