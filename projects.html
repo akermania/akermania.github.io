@@ -1,0 +1,40 @@
+---
+layout: page
+permalink: /projects/
+title: Projects
+background: '/img/main.jpg'
+---
+
+
+<div id="archives">
+{% for category in site.categories %}
+  <div class="archive-group"  style="margin-left: 20%; ">
+    {% capture category_name %}{{ category | first }}{% endcapture %}
+    <div id="#{{ category_name | slugize }}"></div>
+    <p></p>
+
+    <button class="bubbly-button" type="button" onClick="showSub('{{category_name}}_sub')" class="category-head">{{ category_name }}</button>
+    <a name="{{ category_name | slugize }}"></a>
+    <div id="{{ category_name }}_sub" style="display: none">
+      {% for post in site.categories[category_name] reversed %}
+      <article class="archive-item" >
+        <a style="color: black" href="{{ site.baseurl }}{{ post.url }}"> -> {{post.title}}</a>
+      </article>
+      {% endfor %}
+   </div>
+  </div>
+{% endfor %}
+</div>
+
+
+<script>
+  function showSub(category_name_sub){
+    var x = document.getElementById(category_name_sub);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+  }
+
+</script>

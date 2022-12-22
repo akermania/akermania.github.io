@@ -9,6 +9,11 @@ background: '/img/posts.jpg'
 <article class="post-preview">
   <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
     <h2 class="post-title">{{ post.title }}</h2>
+    {% if post.image %}
+    <div  style="float: right; position: inherit;">
+      <img src="{{post.image}}" style="height: 80px;"><img>
+    </div>
+    {% endif %}
     {% if post.subtitle %}
     <h3 class="post-subtitle">{{ post.subtitle }}</h3>
     {% else %}
@@ -21,7 +26,7 @@ background: '/img/posts.jpg'
     {% else %}
     {{ site.author }}
     {% endif %}
-    on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}
+    on {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}  &middot; {{post.project}} 
   </p>
 </article>
 
