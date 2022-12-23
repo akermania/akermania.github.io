@@ -161,11 +161,38 @@ header.masthead {
         a {
             color: black;
         }
+
+
+
+    #navlogo{
+        width: 35px;
+        bottom: 12px;
+        margin-left: 40%;
+        position: absolute; 
+        content: url('/img/AstroStuffLogo-TransperentBlack.png');
+    }     
+
+
+    header.masthead .page-heading .subheading, header.masthead .site-heading .subheading {
+        font-size: 17px;
+    }
 }
 
 
 
+
+
+
 @media (min-width: 992px) {
+
+    #navlogo{
+        width: 35px;
+        bottom: 23px;
+        margin-left: -34px;
+        position: absolute; 
+        content: url('/img/AstroStuffLogo-TransperentWhite.png');
+    }   
+
     .search-box{
         width: fit-content;
         height: fit-content;

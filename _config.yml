@@ -21,7 +21,7 @@
 title: AstroThings
 email: akerman@duck.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Astronomy things
+  "Astronomy compels the soul to look upward, and leads us from this world to another."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: akermania

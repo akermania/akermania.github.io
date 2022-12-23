@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "Build my own AllSky system"
+subtitle: "Searcing for a solution"
+date:   2022-12-23 13:30:52 +0100
+background: /img/2.jpg
+categories: [AllSkyX]
+author: Tal Akerman
+project: AllSkyX
+---
+
+I always wanted an AllSky system, and since we moved to a Bortle 3 skies I couldn't stop thinking about it.
+But in my case, I wanted something that will not only take images of the skies and make cool timelapse videos, but will also provide more information such as temperature and humidity.. and sky quality.. and clouds detection.. and air quality.. 
+and .. well you get the idea - I want to build my own Technodrome 🪩
+
+So I went online to search for some possible solutions, and found some products for sale at exaggerated prices like EVERY.SINGLE.THING that is tagged "for Astronomy" (but this is for another story) and also looks like something from the 80's;
+I also found some cool projects over the web, but nothing really provided me with what I wanted as a full working solution. 
+
+As a data analytic phanatic, I need data, I want data, I'm like the writer of CSI: Logfiles ! 
+So I decided to build my own AllSky system from scratch, that other than taking pictures of the sky will log all the data and present it in a nice insights dashboard, where I can really learn from the data I'm collecting over time, and also use it while my telescopes are outside.
+
+And also... it's cloudy anyways and I need something to do, and I'm on vacation until next year.... and my wife is about to change the locks if I won't stop nagging her...
+
+
+<img src="/img/post2.jpg" style="width: 50%;">
+
+
+It has been decided ! I will dive into my own rabbit hole and build my own AllSky system!  
+Except the taking pictures thing... I don't want to do that from scratch... <a style="color: black;" href="https://github.com/thomasjacquin/allsky">someone already did that </a> .... 
+
+See you in the next chapter!  
+~Tal
