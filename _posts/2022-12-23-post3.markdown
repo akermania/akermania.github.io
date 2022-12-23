@@ -1,0 +1,89 @@
+---
+layout: post
+title:  "High-level system design"
+subtitle: "Selecting parts and technologies"
+date: 2022-12-23 15:00:00 +0100
+background: /img/2.jpg
+categories: [AllSkyX]
+author: Tal Akerman
+project: AllSkyX
+---
+
+In this post I will talk about the technologies and components I've decided to use in this project.  
+
+<img src="/img/post3_1.jpg" style="width: 200px; margin: auto; display: block;">  
+
+#### The brains Or Krangs... because Technodrome ... I'll stop....
+
+
+First we need a Raspberry Pi, that will act as our main Kraig... Uhm... brain, and unfortunately for some of you who don't have one hiding somewhere in your house - the price for it skyrocketed in 2022 due to stuff and lies that no one understands, but they promised that the prices will go down in 2023, we'll see about that.  
+You will need the 4B 4GB version at least, weaker versions or the "Zero" will work but will send you back to 1995 when everything worked REALLY slow. The Pi will hold a bunch of things:
+
+* The AllSky software  
+* The modified AllSky WebUI  -  Control manual triggers such as the heaters, focuser, etc. as well as the original AllSky software itself.  
+* Grafana server - Will show us dashboards with all the data we collected over time, with cool charts, insights and visualizations; It will allow you to understand some interesting things about your environment such as higher barometric pressure equals better weather, clouds vs. temperature and humidity, and all the combination you will want to test with your sensors data.  
+* Influx DB server - Will hold all the historical data we collect from the sensors and other events such as automatic heaters on/off times, system messages and more. It is very light-weight and Grafana supports it.  
+* A connection to Arduino which I will talk about in a second    
+
+Second, we need an Arduino Nano (you don't need the other huge boards - the Nano is more than enough).  
+All the sensors will be connected to the Arduino which will send Serial data to the Raspberry Pi to log it;  
+It is probably possible to build this project without an Arduino, but it will be a big headache simply because the Pi doesn't have analog inputs which will make things more complicated, and also the Arduino libraries are simple to use. Do yourself a favor, these things are cheap, and not only $ wise cheap, but also cheap that they like to stop working for no reason - buy a few so you will have spares.  
+
+<img src="/img/post3_2.jpg" style="width: 400px; margin: auto; display: block;">  
+
+#### The camera and lens
+If I'm going to build something like this, I want it to also provide nice results;  
+First, I know that I want  a color camera, I'm not hunting asteroids and need this extra sensitivity, my main goal for the imaging system is:  
+
+* Time Lapse
+* Star Trails
+* A glimpse at the condition of the skies  
+
+Given that, I need something with good resolution and sensitivity.  
+The ASI120MC and the RPi HQ camera went immediately off the table, and after some investigation I went with the <a style="color:red; font-style: italic;" href="https://astronomy-imaging-camera.com/product/asi678mc">ZWO ASI678 MC</a>, simply because it's from the newer generation of Sony sensors, and the performance is great for the price!  
+As a start I wanted a good FoV so the <a style="color:red; font-style: italic;" href="https://astronomy-imaging-camera.com/product/zwo-2-5mm-150-degree-lens">ZWO 2.5mm 170 degrees lens</a> should do the job well.  
+Oh yes, apparently the ASI678MC already comes with this lens in the box, so I'm now stuck with two of them... Sigh.......  
+
+
+#### Sensors 
+To build my Technodrome I wanted as many sensors as I can get that will fit this project...  
+Navigate to AliExpress (because really, Amazon and Ebay have triple the prices);  
+<span><font style="color:red;">Pro tip -</font></span> look for the "15 days delivery guarantee" next to the product, it really arrives after 15 days.  
+If this guarantee doesn't exists - change the Shipping method to "AliExpress Standard/Saver Shipping" - Don't forget that or else you will end up waiting like Mr. Bean ... 
+
+<img src="/img/mr-bean-waiting.gif" style="width: 400px; margin: auto; display: block;"> 
+
+
+I chose a store with good reviews and started going over all the sensors it offers, well, it took me about 6 hours but I ordered a bunch of sensors, a few of each... you know... because I need it... for stuff ... and it's REALLY cheap!  
+<span><font style="font-weight: bold">Note - </font></span>I'm publishing the links to buy each component, but pay attention that the item price and shipping can vary depending on your location  
+<span><font style="font-weight: bold">Another note - </font></span>these are not affiliated links  
+<span><font style="font-weight: bold">Another note_final - </font></span>when writing this post, I still didn't design the case, so it will not contain the parts for it. search for the post with the case design.  
+<span><font style="font-weight: bold">Another note_final2 - </font></span>If you still don't have soldering tools - this is the time to order them.  
+<span><font style="font-weight: bold">Another note_final_for_real -</font></span> If you still don't have development tools such as Breadboards and wires - this is the time to order them as well.   
+
+* <u><a style="color:black; font-style: italic;" href="https://www.aliexpress.com/item/1005004116667437.html">SHT31 temperature and humidity sensor</a></u> - you will need two of these, and make yourself a favor and order like 10 because these are awesome! 
+* <u><a style="color:black; font-style: italic;" href="https://www.aliexpress.com/item/1005004903983565.html">DS18B20 temperature sensor probe kit</a></u> - Because it's waterproof and cheap, and it will help us calibrate the other sensors. get it. get it. get it. 
+* <u><a style="color:black; font-style: italic;" href="#">DHT22 temperature and humidity sensor</a></u> - I bought it so you won't have to - skip this one because it's a shity sensor. you will get why later. 
+* <u><a style="color:black; font-style: italic;" href="https://www.aliexpress.com/item/32709141948.html">BMP280 Digital barometric pressure sensor</a></u> - Great to measure the barometric pressure, it also measures altitude, IDK if you want to know how... high... are you   and it also measures temperature because we don't have enough of these. 
+* <u><a style="color:black; font-style: italic;" href="https://www.aliexpress.com/item/4001255844417.html">MLX90614 Infrared Temperature IR sensor</a></u> - That is a very cool sensor, that, you guessed it - measures temperature! but in a cool way - it's an IR sensor that outputs the ambient temperature and also the sky temperature which makes it a great tool to detect clouds. You are now the master of the clouds. 
+* <u><a style="color:black; font-style: italic;" href="https://www.aliexpress.com/item/1005003263690690.html">TSL2591 digital light sensor</a></u> - a fancy light sensor that is very accurate, providing Lux calculations, Gain and timing configurable, and measures IR, Full-Spectrum and Visible light. Sweet ! This thing will help us measure our sky quality, and maybe detect clouds, no one ever done that but... A larger visible/infrared ratio typically indicates the presence of clouds, as clouds reflect more visible light and absorb more infrared light compared to clear skies. Maybe...we'll see... 
+* <u><a style="color:black; font-style: italic;" href="#">TSL237 light-to-frequency sensor</a></u> - This is something I already had at home so I don't have a link to it... It basically will help us get another measurement for our sky quality, because more data is better.
+* <u><a style="color:black; font-style: italic;" href="https://www.aliexpress.com/item/4001283443851.html">Rain sensor</a></u> - the name pretty much says it all... 
+* <u><a style="color:black; font-style: italic;" href="https://www.aliexpress.com/item/4001283872603.html">MQ-135 air quality sensor</a></u> - You can skip it, but it's always nice to know the type of air you are breathing.  
+
+<img src="/img/post3_3.jpg" style="width: 400px; margin: auto; display: block;">  
+
+#### More stuff to buy:
+* <u><a style="color:black; font-style: italic;" href="https://www.aliexpress.com/item/1005001650766139.html">DC-DC Buck converter "Blue Good"</a></u> - We need a stepdown to 5v as our main system will run on 12v.
+* <u><a style="color:black; font-style: italic;" href="https://www.aliexpress.com/item/32649659086.html">5v 4-channel Relay</a></u> - to control the heaters and the power supply for the focuser motor.
+* <u><a style="color:black; font-style: italic;" href="#">5V 28BYJ-48 Stepper motor and a ULN2003 module </a></u> - This is also something that I already had lying around the house, so no link for that. This is the motor and the driver for our focuser. 
+* <u><a style="color:black; font-style: italic;" href="https://www.aliexpress.com/item/33004388989.html">25 degrees lens </a></u> - Lens for the TSL237 sensor.
+* <u><a style="color:black; font-style: italic;" href="#">11mm diameter 650nm IR filter </a></u> - No link.. sorry.. ordered it about a year ago, cost $1 but the link is not active anymore... also for the TSL237 sensor.
+* <u><a style="color:black; font-style: italic;" href="https://www.aliexpress.com/item/1005002226516848.html">GT2 timing pulley </a></u> - 20 teeth, 5mm bore, 6mm width - for our focuser; I still haven't decided if I will do it with a timing belt, or 3d printed part so stay tuned on that topic... 
+* <u><a style="color:black; font-style: italic;" href="https://www.amazon.de/dp/B07JGNF5F8"> Raspberry Pi fan </a></u> - for hot days, you'll need a fan to avoid throttling, you will see in one of my next posts how I transformed this thing into a glorified PWM fan that is automatically controlled based on the CPU temperature.  
+
+ 
+
+
+
+
