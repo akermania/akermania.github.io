@@ -25,7 +25,7 @@ And also... it's cloudy anyways and I need something to do, and I'm on vacation 
 <img src="/img/post2.jpg" style="width: 50%;">
 
 
-It has been decided ! I will dive into my own rabbit hole and build my own AllSky system!  
+It has been decided ! I will dive into my own rabbit hole and build my own AllSky system! I shall call it - The AllSkyX !
 Except the taking pictures thing... I don't want to do that from scratch... <a style="color: black;" href="https://github.com/thomasjacquin/allsky">someone already did a great job with that </a> .... 
 
 See you in the next chapter!  
