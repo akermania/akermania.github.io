@@ -27,7 +27,8 @@ You will need the 4B 4GB version at least, weaker versions or the "Zero" will wo
 
 Second, we need an Arduino Nano (you don't need the other huge boards - the Nano is more than enough).  
 All the sensors will be connected to the Arduino which will send Serial data to the Raspberry Pi to log it;  
-It is probably possible to build this project without an Arduino, but it will be a big headache simply because the Pi doesn't have analog inputs which will make things more complicated, and also the Arduino libraries are simple to use. Do yourself a favor, these things are cheap, and not only $ wise cheap, but also cheap that they like to stop working for no reason - buy a few so you will have spares.  
+It is probably possible to build this project without an Arduino, but it will be a big headache simply because the Pi doesn't have analog inputs which will make things more complicated, and also the Arduino libraries are simple to use.  
+Do yourself a favor, these things are cheap, and not only $ wise cheap, but also cheap that they like to stop working for no reason - buy a few so you will have spares.  
 
 <img src="/img/post3_2.jpg" style="width: 400px; margin: auto; display: block;">  
 
