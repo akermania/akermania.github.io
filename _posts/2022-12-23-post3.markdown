@@ -30,7 +30,7 @@ All the sensors will be connected to the Arduino which will send Serial data to
 It is probably possible to build this project without an Arduino, but it will be a big headache simply because the Pi doesn't have analog inputs which will make things more complicated, and also the Arduino libraries are simple to use.  
 Do yourself a favor, these things are cheap, and not only $ wise cheap, but also cheap that they like to stop working for no reason - buy a few so you will have spares.  
 
-<img src="/img/post3_2.jpg" style="width: 400px; margin: auto; display: block;">  
+<img src="/img/post3_2.jpg" style="width: 350px; margin: auto; display: block;">  
 
 #### The camera and lens
 If I'm going to build something like this, I want it to also provide nice results;  
@@ -52,7 +52,7 @@ Navigate to AliExpress (because really, Amazon and Ebay have triple the prices);
 <span><font style="color:red;">Pro tip -</font></span> look for the "15 days delivery guarantee" next to the product, it really arrives after 15 days.  
 If this guarantee doesn't exists - change the Shipping method to "AliExpress Standard/Saver Shipping" - Don't forget that or else you will end up waiting like Mr. Bean ... 
 
-<img src="/img/mr-bean-waiting.gif" style="width: 400px; margin: auto; display: block;"> 
+<img src="/img/mr-bean-waiting.gif" style="width: 350px; margin: auto; display: block;"> 
 
 
 I chose a store with good reviews and started going over all the sensors it offers, well, it took me about 6 hours but I ordered a bunch of sensors, a few of each... you know... because I need it... for stuff ... and it's REALLY cheap!  
@@ -72,7 +72,7 @@ I chose a store with good reviews and started going over all the sensors it offe
 * <u><a style="color:black; font-style: italic;" href="https://www.aliexpress.com/item/4001283443851.html">Rain sensor</a></u> - the name pretty much says it all... 
 * <u><a style="color:black; font-style: italic;" href="https://www.aliexpress.com/item/4001283872603.html">MQ-135 air quality sensor</a></u> - You can skip it, but it's always nice to know the type of air you are breathing.  
 
-<img src="/img/post3_3.jpg" style="width: 400px; margin: auto; display: block;">  
+<img src="/img/post3_3.jpg" style="width: 350px; margin: auto; display: block;">  
 
 #### More stuff to buy:
 * <u><a style="color:black; font-style: italic;" href="https://www.aliexpress.com/item/1005001650766139.html">DC-DC Buck converter "Blue Good"</a></u> - We need a stepdown to 5v as our main system will run on 12v.
