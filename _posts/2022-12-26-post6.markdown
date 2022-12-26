@@ -1,0 +1,234 @@
+---
+layout: post
+title:  "Wiring the mess"
+subtitle: "Writing the Arduino code"
+date: 2022-12-26 21:00:00 +0100
+background: /img/posts/1.jpg
+categories: [AllSkyX]
+author: Tal Akerman
+project: AllSkyX
+---
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+Ok stay with me, if you come this far you may want to stick to the end.    
+It's time to wire everything to the Arduino and write the code.    
+
+  
+The plan - a Serial listener which will call to different functions based on the command.   
+The output - always a JSON text, this way it will be easier to parse on the Pi side.  
+The commands (which maybe change in the future):     
+ - <u>initSensors</u> - initiate the sensor's connections.  
+ - <u>getSensors</u> - the main and most important function - get data from all the sensors    
+ - <u>cameraHeaterOn/Off</u> - turns on or off the Relay for the camera heater    
+ - <u>sensorsHeaterOn/Off</u> - turns on or off the Relay for the rain sensor  
+ - <u>focuserOn/Off</u> - turns on or off the Relay for the focuser, this is to avoid power draw from the motor  
+ - <u>Focuser-Direction-Amount</u> - "Direction" can be CW or CCW, and "Amount" can be small,med,high,max and it will move the focuser based on these parameters  
+ - <u>calibrateAirSensor</u> - calibrating the air sensors, we'll talk about it  
+ - <u>reset</u> - reset the Arduino in case something isn't working as expected  
+  
+
+The wiring is pretty much straight forward...kidding, not really, this is how it will probably look like in the begining:   
+
+<img src="/img/allskyx_post6/2.jpg" style="width: 60%; margin: auto; display: block;"> 
+
+A mess of wires, but that's fine... that's fine... don't worry I got you. 
+Here is how it should look like :   
+
+<img src="/img/allskyx_post6/3.jpg" style="width: 100%; margin: auto; display: block;"> 
+  
+Make yourself comfortable and try not to blow anything up.  
+Alternatively, if you're lazy you can fast forward to my post about the PCB making.   
+
+And as always, for those who say - "Oh noo, tHiS coDE iS nOt eFfiCieNt" - try adding the following line to the code, it will help you go F#$k yourself:   
+
+{% highlight python %}
+#define TRUE FALSE
+{% endhighlight %}
+  
+Are you still here? Good. You didn't blow yourself or got tangled by the evil wires.  
+<b>Now that we have everything wired up we can load the code to the Arduino, you can download or clone it from <a href="https://github.com/akermania/AllSkyX/blob/main/arduino.ino" style="color: black">my Github repository</a></b>   
+
+
+<details><summary markdown="span">The libraries you need are are listed here</summary>
+Most of the libraries can be downloaded from the IDE, but for the TSL2591 SQM reading you will need the <a href="https://github.com/akermania/AllSkyX/blob/main/SQM_TSL2591.cpp" style="color:black">.cpp</a> and <a href="https://github.com/akermania/AllSkyX/blob/main/SQM_TSL2591.h" style="color:black">.h</a> files which should be at the same location as your .ino file (Arduino code) while compling it.  
+
+{% highlight c %}
+#include <Arduino.h>
+#include <Wire.h>
+#include "Adafruit_SHT31.h"
+#include <OneWire.h>
+#include <DallasTemperature.h>
+#include <SPI.h>
+#include <Adafruit_Sensor.h>
+#include <Adafruit_BMP280.h>
+#include "SQM_TSL2591.h"
+#include <Adafruit_MLX90614.h>
+#include <FreqMeasure.h>
+#include <Math.h>
+#include <AccelStepper.h>
+#include <Servo.h>
+{% endhighlight %}
+</details>  
+
+
+Or you can stay here and learn a bit about what's what; I prefer that.  
+
+First thing first, this program takes the Nano to the limit so using F() while printing string is essential; It basically means that you can move constant strings to the program memory instead of the ram.  
+The program is looping for eternity, waiting for a serial connection (i.e a command) at Baud 9600, if the command is one of the predefined strings I listed in the beginning of this post, than it will run a function and return a JSON string that we will latet parse on the Pi. 
+
+<details><summary markdown="span"><b>For the braves - Click here to dive into the code</b>  </summary>  
+  
+  
+{% highlight c %}
+String initSensors()
+{% endhighlight %}
+<details>
+This is a function that will run always at the setup() phase of the Arduino, or by request from the Serial connection, and will initiate/define all the sensors.  
+If it fails to connect to one of the sensors, it will return an error message that will be converted to JSON string and returned to the Pi.
+</details>
+
+<hr>    
+{% highlight c %}
+void loop() {
+  if (Serial.available() > 0) {
+    String command = Serial.readStringUntil('#');
+{% endhighlight %}
+<details>
+As mentioned earlier, the program is looping for eternity, waiting for a serial connection, and if find one - it will read it until the character "#", this is a common practice in Arduino coding and Serial connection.
+</details>
+
+<hr>   
+{% highlight c %}
+void getSensors()
+{% endhighlight %}
+<details>
+The main function, the gold, the one that really returns what we need - the sensors readings.  
+It also uses external libraries that made my life a lot more easier, and the rabbit hole less deeper.
+</details>
+
+<hr>   
+{% highlight c %}
+String getRainSensor(int range)
+{% endhighlight %}
+
+<details>
+{% highlight c %}
+int rainSensorReading = analogRead(A0);
+int range = map(rainSensorReading, rainSensorMin, rainSensorMax, 0, 3);
+
+String getRainSensor(int range){
+  switch (range) {
+  case 0:    // Sensor getting very wet
+      return "Raining Hard";
+      break;
+  case 1:    // Sensor getting wet
+      return "Raining";
+      break;
+  case 2:    // Sensor dry
+      return "Not Raining";
+      break;
+    }
+}
+{% endhighlight %}  
+The rain sensor is a cool gadget, it can be stupid and use a digital pin and return 1 (for wet) and 0 (not wet) or it can use an analog pin and return a range between 0 and 1024 (0 - very dry, and 1024 - you probably need a boat).  
+So what we're doing here is to get an analog read, map the values from 0-1024 to 0-2, and deduct from it how "wet" the sensor is.   
+<b>Tip:</b> there is a potentiometer on the sensor's board - this is to adjust the sensitivity of it, sprinkle a bit of water on the sensor (NOT THE BOARD) and see what value you are getting, adjust the dial accordingly.
+</details>
+
+<hr>   
+{% highlight c %}
+sqm.takeReading()
+{% endhighlight %}
+
+<details>
+This function uses an <a href="https://github.com/gshau/SQM_TSL2591/tree/master/SQM_TSL2591" style="color:black">external library</a> for the TSL2591 sensor, that was modified for SQM calculations. 
+The <a href="https://github.com/akermania/AllSkyX/blob/main/SQM_TSL2591.cpp" style="color:black">.cpp</a> and <a href="https://github.com/akermania/AllSkyX/blob/main/SQM_TSL2591.h" style="color:black">.h</a> files should be at the same location as your .ino file (Arduino code) while compling it.  
+The library will output a few double variables - full spectrum, IR light, visible light, the SQM calculation and the uncertainty in percetage.
+I also added the current gain and timing configuration of the sensor reading which is dynamic based on the light conditions. 
+</details>
+
+<hr>   
+{% highlight c %}
+String calculateBortel(double sqm)
+{% endhighlight %}
+<details>
+Will <a href="https://en.wikipedia.org/wiki/Bortle_scale"  style="color:black"> calculate the Bortle</a> based on the SQM.
+</details>
+
+<hr>   
+{% highlight c %}
+float getFreqMeasure()
+{% endhighlight %}
+<details>
+Using the <a href="https://github.com/PaulStoffregen/FreqMeasure"   style="color:black"> FreqMeasure library</a> to calculate the light frequency from the TSL237 sensor, and convert it to SQM with Frequency to magnitudes/arcSecond2 formula.
+</details>
+
+<hr>   
+{% highlight c %}
+float MQCalibration(int mq_pin)
+float MQResistanceCalculation(int raw_adc)
+float MQRead(int mq_pin)
+long MQGetGasPercentage(float rs_ro_ratio, int gas_id)
+long MQGetPercentage(float rs_ro_ratio, float *pcurve)
+{% endhighlight %}
+<details>
+These functions are based on <a href="https://www.instructables.com/How-to-Detect-Concentration-of-Gas-by-Using-MQ2-Se/"  style="color:black">this nice article</a> and will get us readings from the air quality sensor - in particular the precentage of Carbon Monoxide, LPG and smoke, along with the general air quality reading.
+The sensor calibration can take time (up to 30 seconds), so we are will not enable it for now just to save time, but it is still there as one of the Serial commands.
+</details>
+<hr>   
+{% highlight c %}
+void heaterControl(int pin,String onoff)
+{% endhighlight %}
+<details>
+Gets a ping number for a heater that is conected to the relay, and turning it on or off. 
+</details>
+<hr>   
+{% highlight c %}
+void focuserControl(bool onoff)
+{% endhighlight %}
+<details>
+Turning the focuser relay pin on or off.  
+This design was made to save power while we don't need to use the focuser.  
+Also, the focuser can get hot while on standby, so it's better to leave it off.
+</details>
+<hr>   
+{% highlight c %}
+void rotateMotor(int steps,String direction)
+{% endhighlight %}
+<details>
+Gets number of steps, and direction - CW or CCW, and rotates the motor.
+</details>
+
+</details> 
+<hr>     
+  
+
+Load the code into the Arduino and test it with the IDE Serial connection:  
+Once the Arduino finished loading up, you should see  
+{% highlight json %}
+{'ok':'1'}###
+{% endhighlight %}  
+That means that you wired everything nice and tight, or if not, you should get something like: 
+{% highlight json %}  
+{'ok':'0','error':'ERROR:Could not find a valid SHT31b sensor, check wiring!'}###
+{% endhighlight %}
+Check your wiring, connections and solders.  
+
+Now you can send commands to the program, remember, only commands from the list will work, and they must end with "#", for example, if you write <i>getSensors#</i> , you should get:  
+{% highlight json %}  
+{'sht31a_temp':'23.34','sht31a_humidity':'26.13','sht31b_temp':'23.75','sht31b_humidity':'25.07','ds18b20_temp':'-127.00','bmp_temp':'23.54','bmp_pressure':'957.62','bmp_altitude':'468.92','mlx_ambient':'22.97','mlx_object':'22.59','tsl237_sqm':'13.36','tsl2591_full':'2197','tsl2591_ir':'572','tsl2591_visible':'1625','tsl2591_sqm':'11.14','tsl2591_uncertainty':'0.03','tsl2591_gain':'32','tsl2591_time':'1','isRaning':'Raining Hard','Bortel':'B.8/9','airSensor':'32','lpg':'0','co':'0','smoke':'0','camera_heater':'0','sensors_heater':'0','focuser':'0','ok':'1'}###
+{% endhighlight %}
+
+Hurray!  
+The Arduino side is working!   
+Next steps are to send and log all this data to the Pi, keep following! 
+
+~Tal 
+
+
+
+
+
