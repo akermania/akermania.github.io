@@ -18,7 +18,7 @@ project: AllSkyX
 
 One eternity later all the sensors have arrived, kidding, it took less than 15 days if you followed my instructions in the previous post.  
 
-So now you have all these little computery things and it looks like you are trying to take over the world, just do yourself a favor - don't take it with you through the airport security.  
+So now you have all these, how my wife calls it, little computery things and it looks like you are trying to take over the world, just do yourself a favor - don't take it with you through the airport security.  
 
 Ok let's get serious, at first the Arduino wasn't part of the plan, I thought that everything is going to be connected to the Raspberry Pi, but through the process I learned that I will need extra hardware to convert some of the Pi digital pins to analog pins as some of the sensors needs it, and also the Python libraries... the dependencies... It's like 3% coding and 97% understanding what, where, how package you need @!#$.  
 But I still wanted to test the sensors and see how they work and what kind of output they give;  
