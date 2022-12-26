@@ -18,7 +18,7 @@ project: AllSkyX
 
 One eternity later all the sensors have arrived, kidding, it took less than 15 days if you followed my instructions in the previous post.  
 
-So now you have all these, how my wife calls it, little computery things and it looks like you are trying to take over the world, just do yourself a favor - don't take it with you through the airport security.  
+So now you have all these, how my wife calls it, little computery things and it looks like you are trying to take over the world, just do yourself a favor - don't take it with you through the airport security 🙃.   
 
 Ok let's get serious, at first the Arduino wasn't part of the plan, I thought that everything is going to be connected to the Raspberry Pi, but through the process I learned that I will need extra hardware to convert some of the Pi digital pins to analog pins as some of the sensors needs it, and also the Python libraries... the dependencies... It's like 3% coding and 97% understanding what, where, how package you need @!#$.  
 But I still wanted to test the sensors and see how they work and what kind of output they give;  
@@ -45,7 +45,7 @@ Apparently I connected the VCC and GND of this sensor to the opposite sides.. oh
 Anddd up to the next issue - apparently you need to be a NASA engineer to get the DS18B20 to work on the Pi, if you really want to - you can find instructions <a href="https://pimylifeup.com/raspberry-pi-temperature-sensor/" style="color: black">here</a> on how to get it to work.  
 
 Now this is done, up to the next thing - the two SHT31 sensors have the same address (0x44), so how do I get them to work while they are both connected?  
-Good question, said no one on Google;  Apparently there is an ADDR pin on the sensor, that once you put it on HIGH it's reality changes and it thinks it'sbetter than everyone, but most importantly, the address changes to 0x45 ! 
+Good question, said no one on Google;  Apparently there is an ADDR pin on the sensor, that once you put it on HIGH it's reality changes and it thinks it's better than everyone, but most importantly, the address changes to 0x45 ! 
 
 Finally! We are now good to go with the code, don't forget that you need to be a Ninja and install all the Python packages (see imports in the attached code below, use pip3 to install them).  
 At first I created a very simple Python script that reads the sensor data every 5 seconds and logs it with a timestamp to a .csv file. 

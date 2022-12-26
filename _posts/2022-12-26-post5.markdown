@@ -1,0 +1,70 @@
+---
+layout: post
+title:  "Sensors after-party"
+subtitle: "Calibrating the senors"
+date: 2022-12-26 16:00:00 +0100
+background: /img/2.jpg
+categories: [AllSkyX]
+author: Tal Akerman
+project: AllSkyX
+---
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+Now that we can get sensor readings, I wanted to calibrate them so all of them will be aligned with each other.  
+For our application, we need a base measurement that we know is accurate - DS18B20 + the snow in my garden to the rescue!  
+
+We know that the temperature of snow with a bit of water to fill in the air inside will be 0 degrees Celsius, and we know that the DS18B20 probe is waterproof;  
+You see where I'm getting here?  
+1. Take a cup, fill it with snow, or ice from your freezer, or a bit of your mother-in-law's soul, and top it with very little water just to fill in the gaps  
+2. Lower down your DS18B20 probe into the cup  
+3. Start the Python script from the previous post, and hope to read 0 degrees from the sensor  
+4. If the sensor shows for example 0.64 degrees, you know it's off by +0.64, if it shows -0.32, you know it's off by... -0.32  
+
+We have a base measurement!  
+Now in our code, in the DS18B20 section we should add the calibration offset that we measured, i.e:  
+{% highlight python %}
+ds18b20_temp = round(read_temp()+0.64,2)  
+{% endhighlight %}
+
+Next part includes calibrating both temperature and humidity readings for all the other sensors.  
+For that we will need:  
+- Sealed box or jar  
+- Sodium Chloride (which is just regular table salt, I'm not trying to get you on the no-fly list 😄), don't try to be sophisticated with pink salt from Walhalla or some S*!# 
+- Bit of water  
+
+The reason for the salt is that in a sealed container of moist salts, the air above the salts will reach a known relative humidity.  
+The relative humidity above the salt does depend slightly on the temperature - so the temperature readings will help us here as well.  
+
+See the below table for the known relative humidity at different temperatures.  
+
+
+| Salt            |  15°C | 20°C | 25°C | 30°C | 35°C |  
+|---------------|-----|----|----|----|----|  
+| Sodium Chloride | 75.61 | 75.47| 75.29| 75.09| 74.87|
+  
+  
+And for the fun part:  
+- Pour 1cm of salt (0.4 Inch in the wrong metric) into the box  
+- Add a little water to the box so that the salt is wet; The goal is to end up with wet salt, not to totally dissolve the salt.
+- place the sensors inside the box - DO NOT get the salt or salt solution on the sensor
+- Seal the box - Wait at least an hour (!)  
+
+
+Lets calibrate the temperatures first - our sensors are now in a controlled sealed environment, so they should all show the same readings +- minor errors.  
+Our DS18B20 is already calibrated, so we should align all the other sensors to it, for example - if the DS18B20 shows 23.3 degrees, and the BMP280 shows 23.8, we know that it's off by -0.5 degrees.  
+Do it for all the sensors until they are all show the same temperature (+-)  
+Now that we have the temperature, according to the table above we should also know the humidity, for example - if we have 20 degrees inside the box, the humidity needs to be around 75.47% - take that measurement and calibrate your humidity readings according to it.  
+
+Write down your calibrations, as we will use it in the future in our sensor configurations.  
+
+Kudos!  
+We are ready for the next step - moving to the Arduino.  
+
+<img src="/img/post_5_1.gif" style="width: 60%; margin: auto; display: block;"> 
+
+
+See you on the next post;  
+~Tal
