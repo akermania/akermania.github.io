@@ -3,7 +3,7 @@ layout: post
 title:  "Build my own AllSky system"
 subtitle: "Searcing for a solution"
 date:   2022-12-23 13:30:52 +0100
-background: /img/2.jpg
+background: /img/posts/2.jpg
 categories: [AllSkyX]
 author: Tal Akerman
 project: AllSkyX
@@ -22,7 +22,7 @@ So I decided to build my own AllSky system from scratch, that other than taking 
 And also... it's cloudy anyways and I need something to do, and I'm on vacation until next year.... and my wife is about to change the locks if I won't stop nagging her...
 
 
-<img src="/img/post2.jpg" style="width: 50%;">
+<img src="/img/allskyx_post2/1.jpg" style="width: 50%;">
 
 
 It has been decided ! I will dive into my own rabbit hole and build my own AllSky system! I shall call it - The AllSkyX !

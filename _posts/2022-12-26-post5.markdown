@@ -3,7 +3,7 @@ layout: post
 title:  "Sensors after-party"
 subtitle: "Calibrating the senors"
 date: 2022-12-26 16:00:00 +0100
-background: /img/2.jpg
+background: /img/posts/2.jpg
 categories: [AllSkyX]
 author: Tal Akerman
 project: AllSkyX
@@ -63,7 +63,7 @@ Write down your calibrations, as we will use it in the future in our sensor conf
 Kudos!  
 We are ready for the next step - moving to the Arduino.  
 
-<img src="/img/post_5_1.gif" style="width: 60%; margin: auto; display: block;"> 
+<img src="/img/allskyx_post5/1.gif" style="width: 60%; margin: auto; display: block;"> 
 
 
 See you on the next post;  
