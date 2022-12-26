@@ -13,7 +13,7 @@ In this post I will talk about the technologies and components I've decided to u
 
 <img src="/img/post3_1.jpg" style="width: 200px; margin: auto; display: block;">  
 
-#### The brains Or Krangs... because Technodrome ... I'll stop....
+#### The brains, Or Krangs of the system... because Technodrome ... I'll stop....
 
 
 First we need a Raspberry Pi, that will act as our main Kraig... Uhm... brain, and unfortunately for some of you who don't have one hiding somewhere in your house - the price for it skyrocketed in 2022 due to stuff and lies that no one understands, but they promised that the prices will go down in 2023, we'll see about that.  
@@ -81,7 +81,14 @@ I chose a store with good reviews and started going over all the sensors it offe
 * <u><a style="color:black; font-style: italic;" href="https://www.aliexpress.com/item/33004388989.html">25 degrees lens </a></u> - Lens for the TSL237 sensor.
 * <u><a style="color:black; font-style: italic;" href="#">11mm diameter 650nm IR filter </a></u> - No link.. sorry.. ordered it about a year ago, cost $1 but the link is not active anymore... also for the TSL237 sensor.
 * <u><a style="color:black; font-style: italic;" href="https://www.aliexpress.com/item/1005002226516848.html">GT2 timing pulley </a></u> - 20 teeth, 5mm bore, 6mm width - for our focuser; I still haven't decided if I will do it with a timing belt, or 3d printed part so stay tuned on that topic... 
-* <u><a style="color:black; font-style: italic;" href="https://www.amazon.de/dp/B07JGNF5F8"> Raspberry Pi fan </a></u> - for hot days, you'll need a fan to avoid throttling, you will see in one of my next posts how I transformed this thing into a glorified PWM fan that is automatically controlled based on the CPU temperature.  
+* <u><a style="color:black; font-style: italic;" href="https://www.amazon.de/dp/B07JGNF5F8"> Raspberry Pi fan </a></u> - for hot days, you'll need a fan to avoid throttling, you will see in one of my next posts how I transformed this thing into a glorified PWM fan that is automatically controlled based on the CPU temperature.  
+
+In the next post I will talk about the sensors, and how I tested them.  
+
+Happy holidays!  
+
+~Tal  
+
 
  
 
