@@ -31,8 +31,8 @@ Yes, it's that easy...
 sensors_data will hold... our sensors data received from the Arduino, and events will hold events such as errors, heaters on/off triggers etc.   
 Now that we got this out of the way, we can proceed to the Python code;  
 Before you begin make sure you have all these libraries installed, how? just import everything and see if it works, if not - pip3 it.  
-influxdb_client is important, make sure you have the <a href="https://influxdb-client.readthedocs.io/en/latest/" style="color:black" >correct version</a>.  
-
+influxdb_client is important, make sure you have the <a href="https://influxdb-client.readthedocs.io/en/latest" style="color:black">correct version.</a>   
+  
 The code will start a few different processes:  
 1. Request every X seconds the sensors data and log it to the DB 
 2. Open a socket and wait for a single command request, i.e. heater on, focuser control etc. , this is threaded to support multiple requests 
@@ -48,5 +48,5 @@ We also have calibrations.json which will offset all the sensor results based on
 You can download everything from the <a href="https://github.com/akermania/AllSkyX/tree/main/RaspberryPi" style="color:black">Github page.</a> 
 
 
-Happy new year!
+Happy new year!  
 ~Tal
