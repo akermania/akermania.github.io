@@ -145,7 +145,7 @@ sqm.takeReading()
 
 <details>
 This function uses an <a href="https://github.com/gshau/SQM_TSL2591/tree/master/SQM_TSL2591" style="color:black">external library</a> for the TSL2591 sensor, that was modified for SQM calculations. 
-The <a href="https://github.com/akermania/AllSkyX/blob/main/SQM_TSL2591.cpp" style="color:black">.cpp</a> and <a href="https://github.com/akermania/AllSkyX/blob/main/SQM_TSL2591.h" style="color:black">.h</a> files should be at the same location as your .ino file (Arduino code) while compling it.  
+The <a href="https://github.com/akermania/AllSkyX/blob/main/Arduino/SQM_TSL2591.cpp" style="color:black">.cpp</a> and <a href="https://github.com/akermania/AllSkyX/blob/main/Arduino/SQM_TSL2591.h" style="color:black">.h</a> files should be at the same location as your .ino file (Arduino code) while compling it.  
 The library will output a few double variables - full spectrum, IR light, visible light, the SQM calculation and the uncertainty in percetage.
 I also added the current gain and timing configuration of the sensor reading which is dynamic based on the light conditions. 
 </details>

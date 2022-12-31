@@ -10,6 +10,7 @@ project: AllSkyX
 ---
 
 In this post I will talk about the technologies and components I've decided to use in this project.  
+<b>Look for the final BOM post as things will likely to change a bit</b>
 
 <img src="/img/allskyx_post3/1.jpg" style="width: 200px; margin: auto; display: block;">  
 
@@ -80,7 +81,7 @@ I chose a store with good reviews and started going over all the sensors it offe
 * <u><a style="color:black; font-style: italic;" href="#">5V 28BYJ-48 Stepper motor and a ULN2003 module </a></u> - This is also something that I already had lying around the house, so no link for that. This is the motor and the driver for our focuser. 
 * <u><a style="color:black; font-style: italic;" href="https://www.aliexpress.com/item/33004388989.html">25 degrees lens </a></u> - Lens for the TSL237 sensor.
 * <u><a style="color:black; font-style: italic;" href="#">11mm diameter 650nm IR filter </a></u> - No link.. sorry.. ordered it about a year ago, cost $1 but the link is not active anymore... also for the TSL237 sensor.
-* <u><a style="color:black; font-style: italic;" href="https://www.aliexpress.com/item/1005002226516848.html">GT2 timing pulley </a></u> - 20 teeth, 5mm bore, 6mm width - for our focuser; I still haven't decided if I will do it with a timing belt, or 3d printed part so stay tuned on that topic... 
+* <span><s><u><a style="color:black; font-style: italic;" href="https://www.aliexpress.com/item/1005002226516848.html">GT2 timing pulley </a></u> - 20 teeth, 5mm bore, 6mm width - for our focuser; I still haven't decided if I will do it with a timing belt, or 3d printed part so stay tuned on that topic...</s> Will probably use a 3D printed pulley and a timing belt - will update.</span>
 * <u><a style="color:black; font-style: italic;" href="https://www.amazon.de/dp/B07JGNF5F8"> Raspberry Pi fan </a></u> - for hot days, you'll need a fan to avoid throttling, you will see in one of my next posts how I transformed this thing into a glorified PWM fan that is automatically controlled based on the CPU temperature.  
 
 In the next post I will talk about the sensors, and how I tested them.  

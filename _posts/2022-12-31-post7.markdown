@@ -1,0 +1,52 @@
+---
+layout: post
+title:  "The other side"
+subtitle: "Writing the Python code"
+date: 2022-12-31 17:00:00 +0100
+background: /img/posts/1.jpg
+categories: [AllSkyX]
+author: Tal Akerman
+project: AllSkyX
+---
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+In the last post we wrote the Arduino code - the one that collects the data from all the sensors.  
+But we need a way to send this data to the Raspberry Pi so we can store it in our DB.  
+First thing first, we need a DB - I hate MySQL, so I looked online for a mainstream DB that is supported by Grafana and decided to go with InfluxDB;  
+Why? Simply because it was the first result on Google, and lets be honest, we don't want to over-complicate things.    
+You can find <a href="https://pimylifeup.com/raspberry-pi-influxdb/" style="color:black">here</a> an article on how to install InfluxDB on your Pi.After installing and starting the DB, create two DBs:  
+
+{% highlight c %}
+influx
+CREATE DATABASE sensors_data
+CREATE DATABASE events
+quit 
+{% endhighlight %}
+  
+
+Yes, it's that easy...  
+sensors_data will hold... our sensors data received from the Arduino, and events will hold events such as errors, heaters on/off triggers etc.   
+Now that we got this out of the way, we can proceed to the Python code;  
+Before you begin make sure you have all these libraries installed, how? just import everything and see if it works, if not - pip3 it.  
+influxdb_client is important, make sure you have the <a href="https://influxdb-client.readthedocs.io/en/latest/" style="color:black" >correct version</a>.  
+
+The code will start a few different processes:  
+1. Request every X seconds the sensors data and log it to the DB 
+2. Open a socket and wait for a single command request, i.e. heater on, focuser control etc. , this is threaded to support multiple requests 
+3. <u><a href="#"  style="color:black">Control the RPi fan based on the CPU temperature</a></u>
+4. <u><a href="#"  style="color:black">Control the heaters based on dew point/frost calculations</a></u>
+5. Make coffee  
+
+
+All this Shabeng will get the variable from config.json file, such as DB information, socket information, fan speeds and more.  
+We also have calibrations.json which will offset all the sensor results based on the existing data in the json file (remember that <a href="/allskyx/2022/12/26/post5.html"  style="color:black">I told you to write it down?</a>)  
+
+
+You can download everything from the <a href="https://github.com/akermania/AllSkyX/tree/main/RaspberryPi" style="color:black">Github page.</a> 
+
+
+Happy new year!
+~Tal
