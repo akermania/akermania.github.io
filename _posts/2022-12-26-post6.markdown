@@ -42,7 +42,7 @@ Here is how it should look like :
 Make yourself comfortable and try not to blow anything up.  
 Alternatively, if you're lazy you can fast forward to my post about the PCB making.   
 
-And as always, for those who say - "Oh noo, tHiS coDE iS nOt eFfiCieNt" - try adding the following line to the code, it will help you go F#$k yourself:   
+And as always, for those who say - "Oh noo, tHiS coDE iS nOt eFfiCieNt" - try adding the following line to the code, it will help you, for sure:   
 
 {% highlight python %}
 #define TRUE FALSE

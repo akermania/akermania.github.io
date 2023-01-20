@@ -1,0 +1,52 @@
+---
+layout: post
+title:  "Fanning the RPi"
+subtitle: "Because why not"
+date: 2023-01-02 17:00:00 +0100
+background: /img/posts/1.jpg
+categories: [AllSkyX]
+author: Tal Akerman
+project: AllSkyX
+---
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+Welcome 2023! 
+Are you still with me ?  
+  
+The next chapter in our journey might get raised eyebrows from some people - Put a fan on your Raspberry Pi.  
+Why do you need it ?  
+Well, you don't really need it if you are living in a cold environment, however if you have hot days that is not very good for the system.  
+If you think that you can prevent dew forming with the heat that comes from the RPi, you are partially correct - what if you have a hot day?  What if the CPU gets hot and starts throttling your system?  
+
+Do yourself a favor and buy a cheap fan that is embedded in a heat sink which should work the best.  
+You can <u><a href="https://www.amazon.de/dp/B07JGNF5F8" style="color:black">buy the same one as I did</a></u> which does not have a PWM control pin, and make you self more work (but a fun kind of work), or you can find something similar with a 3-wire output.  
+
+For those who lost me - PWM eventually provides the ability to choose how fast the fan will spin.  
+Why do you need a PWM control?  
+We can decide based on the CPU temperature and the temperature inside the case or the dew point how fast it will spin.  
+
+
+If you decide to ditch the fun and buy a 3-wire fan (Booo!), you can skip the next steps.  
+After entering my Dexter's Laboratory mode, wiring stuff, and blowing up stuff it's done!  
+Here is the wiring diagram:  
+
+<img src="/img/allskyx_post8/1.jpg" style="width: 100%; margin: auto; display: block;">  
+
+
+And after soldering everything together on a prototype board it will look like this: 
+
+<img src="/img/allskyx_post8/2.jpg" style="width: 100%; margin: auto; display: block;">  
+
+
+Don't worry! it will not look this ugly when I'm done with it, hint - keep reading my next posts!  
+
+Last thing we have to do is connect one side to the fan, and the other side to the RPi, load the code from <u><a href="../../../../allskyx/2022/12/31/post7.html" style="color:black">this post</a></u> and watch it spin.  
+If you want to manually test it, you can download <u><a href="https://github.com/akermania/AllSkyX/blob/main/RaspberryPi/helpers/pwm_fan.py" style="color:black">this simple tool</a></u> where you can type the speed of the fan.  
+
+Happy New Year!  
+~Tal
+
+

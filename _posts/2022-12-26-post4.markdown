@@ -51,7 +51,7 @@ Finally! We are now good to go with the code, don't forget that you need to be a
 At first I created a very simple Python script that reads the sensor data every 5 seconds and logs it with a timestamp to a .csv file. 
 
 You can find the code below for your reference;  
-And for those who say - "Oh noo, tHiS coDE iS nOt eFfiCieNt" -  I don't care, I hope someday someone will add this line to the code and let you debug it:  
+And for those who say - "Oh noo, tHiS coDE iS nOt eFfiCieNt" - add this line to the code, it will me better:  
 
 {% highlight python %}
 #define TRUE FALSE
