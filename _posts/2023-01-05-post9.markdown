@@ -22,7 +22,7 @@ To do that I needed a few things:   
 1. Wires (daa...)  
 2. PCB prototype board  
 3. JST XH2.54 connections (a very friendly name, imagine how fun it was to find this name)  
-4. Soldering gear4. A very shady soldering skill  
+4. Soldering gear, and a very shady soldering skills  
 5. Someone to stand over your head (like my wife) thinking you are going to either burn down the house, or planning an elaborate heist that will finally buy her the fountain of angels in the driveway she always wanted.  
   
 
