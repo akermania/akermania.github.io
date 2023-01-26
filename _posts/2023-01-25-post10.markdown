@@ -1,0 +1,56 @@
+---
+layout: post
+title:  "3D Design"
+subtitle: "A journey towards perfection"
+date: 2023-01-25 17:00:00 +0100
+background: /img/posts/1.jpg
+categories: [AllSkyX]
+author: Tal Akerman
+project: AllSkyX
+image: /img/allskyx_post10/AllSkyX.gif
+---
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
+Welcome again to my journey, and at this point, it looks like it's going to be mAgnIFiCeNt [finger wings gesture... (Oh wait... my wife says it's "Spirit fingers")]
+<img src="/img/allskyx_post10/AllSkyX.gif" style="width: 80%; margin: auto; display: block;">  
+One of my favorite things when working on such projects is the 3D design stage where you can actually do the craziest things that come to mind.  
+So my first draft was, lets call it, well I don't even know how to call it:  
+ 
+<img src="/img/allskyx_post10/2.jpg" style="width: 80%; margin: auto; display: block;">   
+  
+But the idea is very simple -  two bodies, one that contains the brain (....................... C...an't...hold...........it......... Ahhhhhhh...... KRANG)  
+*If you didn't understand the reference it means that you are not following - head back to <u><a href="../../../../allskyx/2022/12/23/post3.html" style="color:black">this post</a></u>   
+
+Back to our topic, so as I said one contains the systems that basically needs to be sealed - all the electronics like the RPi, <u><a href="../../../../allskyx/2023/01/05/post9.html" style="color:black">the fabulous PCB</a></u>, the camera, etc.  
+The Second body contains stuff that should be exposed to the air like the, well, air sensor, one of the SH31 sensors, the clouds sensor and of course the rain sensor.  
+
+I wanted to make everything fit like a glove, so I searched for CAD files for each and every component/sensor that the system contains and built around it.   
+Some were found, and some I had to design myself such as the ASI camera, the PCB, the dome and more.  
+
+<img src="/img/allskyx_post10/asi.gif" style="width: 80%; margin: auto; display: block;"> 
+
+
+
+Ease of use was also important so it will be easy to disassemble if needed; And the most important thing was to keep the dimensions to fit my Ender 3 v2 3D printer.  
+ 
+ <img src="/img/allskyx_post10/3.jpg" style="width: 80%; margin: auto; display: block;">   
+
+
+
+After a lot of work the model is done, and I really like how it turned out ! It has features of a flying sorcerer from the Mars Attack! (ACK ACK!), or a bit of a fat spaceship from the 60's,an AT-AT Walker, and of course - The Technodrome!  
+  
+<img src="/img/allskyx_post10/4.jpg" style="width: 80%; margin: auto; display: block;">  
+
+Same as in the PCB - I still haven't decided if I'm going to release the 3D files to the public, or send it to you in exchange for a small donation  🙃  
+Let me know what you think.   
+
+  
+Next, I need to 3D print this entire thing, with PETG, so there's a lot of fun ahead.  
+
+Stay tuned!  
+~Tal 

@@ -4,7 +4,7 @@ layout: default
 
 <!-- Page Header -->
 {% if page.background %}
-<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
+<header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: \'//\', \'/\' }}')">
   {% else %}
   <header class="masthead">
     {% endif %}
@@ -95,7 +95,7 @@ layout: default
 
             {% if post.image %}
             <div  style="float: right; position: inherit;">
-              <img src="{{post.image}}" style="height: 70px;"><img>
+              <img src="{{post.image}}"  class="image-post-home float-right"><img>
             </div>
             {% endif %}
 

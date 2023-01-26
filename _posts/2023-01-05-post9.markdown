@@ -7,7 +7,6 @@ background: /img/posts/1.jpg
 categories: [AllSkyX]
 author: Tal Akerman
 project: AllSkyX
-image: /img/allskyx_post9/1.jpg
 ---
 <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">

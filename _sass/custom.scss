@@ -101,6 +101,10 @@ header.masthead {
     height: 60px;
   }
 
+  .image-post-home {
+    height: 70px;
+  }
+
 
     .post-preview-featured {
       background-color: #D3D3D3;
@@ -196,6 +200,14 @@ header.masthead {
 
 
 @media (min-width: 992px) {
+
+  .image-post-home {
+    width: 40%;
+    position: inherit;
+    margin-top: -72px;
+  }
+
+
     .image-featured {
       height: 80px;
     }
