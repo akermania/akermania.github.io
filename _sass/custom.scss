@@ -97,8 +97,13 @@ header.masthead {
 
 @media (max-width: 991.98px) {
 
+  .image-featured {
+    height: 60px;
+  }
+
+
     .post-preview-featured {
-      background-color: lightgrey;
+      background-color: #D3D3D3;
       border-radius: 10px;
       height: 13%;
       padding: 0.3% 5% 60% 5%;
@@ -191,9 +196,12 @@ header.masthead {
 
 
 @media (min-width: 992px) {
+    .image-featured {
+      height: 80px;
+    }
 
     .post-preview-featured {
-      background-color: lightgrey;
+      background-color: #D3D3D3;
       border-radius: 10px;
       height: 13%;
       padding: 0.3% 5% 20% 5%;
