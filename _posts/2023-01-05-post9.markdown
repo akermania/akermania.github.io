@@ -37,7 +37,7 @@ The results:
 Looks nice right?  
 Now to check that I didn't screw anything (which I did because of my excellent soldering skills), I connected everything and fired up the system - Kudos ! It's working!  
 
-<img src="/img/allskyx_post9/3.jpg" style="width: 70%; margin: auto; display: block;">  
+<img src="/img/allskyx_post9/3.JPG" style="width: 70%; margin: auto; display: block;">  
   
 
 *Enters my wife - <b>"What is this Russian Death-Ray you have on your table???" </b> 
