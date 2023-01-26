@@ -96,6 +96,14 @@ header.masthead {
 }
 
 @media (max-width: 991.98px) {
+
+    .post-preview-featured {
+      background-color: lightgrey;
+      border-radius: 10px;
+      height: 13%;
+      padding: 0.3% 5% 60% 5%;
+    }
+
     .search-box{
         width: fit-content;
         height: fit-content;
@@ -184,6 +192,14 @@ header.masthead {
 
 @media (min-width: 992px) {
 
+    .post-preview-featured {
+      background-color: lightgrey;
+      border-radius: 10px;
+      height: 13%;
+      padding: 0.3% 5% 20% 5%;
+      width: 120%;
+      margin-left: -10%;
+    }
 
     .container, .container-sm, .container-md, .container-lg, .container-xl {
       max-width: 1500px;

@@ -8,6 +8,7 @@ categories: [AllSkyX]
 author: Tal Akerman
 project: AllSkyX
 image: /img/allskyx_post1/about1.jpg
+featured: true
 ---
 Hi,  
 My name is Tal Akerman, recently relocated to Germany with my wife to her new job in Munich.  
