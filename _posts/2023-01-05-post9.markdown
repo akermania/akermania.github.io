@@ -1,0 +1,95 @@
+---
+layout: post
+title:  "The Russian Death-Ray"
+subtitle: "Prototyping the PCB"
+date: 2023-01-05 17:00:00 +0100
+background: /img/posts/1.jpg
+categories: [AllSkyX]
+author: Tal Akerman
+project: AllSkyX
+image: /img/allskyx_post9/1.jpg
+---
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<img src="/img/allskyx_post9/1.jpg" style="width: 80%; margin: auto; display: block;">  
+  
+
+It's time to get geekier (is that a word?) and fix the wiring mess to be... well... less messy.  
+To do that I needed a few things:   
+
+1. Wires (daa...)  
+2. PCB prototype board  
+3. JST XH2.54 connections (a very friendly name, imagine how fun it was to find this name)  
+4. Soldering gear4. A very shady soldering skill  
+5. Someone to stand over your head (like my wife) thinking you are going to either burn down the house, or planning an elaborate heist that will finally buy her the fountain of angels in the driveway she always wanted.  
+  
+
+The idea here is to see how we can minimize the connections, for example - make one intersection for the A5 connection as almost all the sensors connect to;  
+Now do the same for all the others - A4, GND, 3v, etc...  
+The results:  
+   
+<img src="/img/allskyx_post9/2.jpg" style="width: 70%; margin: auto; display: block;">  
+  
+  
+Looks nice right?  
+Now to check that I didn't screw anything (which I did because of my excellent soldering skills), I connected everything and fired up the system - Kudos ! It's working!  
+
+<img src="/img/allskyx_post9/3.jpg" style="width: 70%; margin: auto; display: block;">  
+  
+
+*Enters my wife - <b>"What is this Russian Death-Ray you have on your table???" </b> 
+
+<img src="/img/allskyx_post9/4.png" style="width: 50%; margin: auto; display: block;">  
+
+
+
+It was at that moment I realized, yes it's pretty, but I need a real PCB, PCB is better looking, and it's also fun to build and not expensive apparently at all.  
+<u><a href="https://easyeda.com/" style="color:black">EasyEDA</a></u> is a Web-tool that I used in the past, allowing you to design your own PCB, and honestly, it's really easy once you get it.  
+ 
+<img src="/img/allskyx_post9/5.jpg" style="width: 70%; margin: auto; display: block;">  
+  
+I decided to model also the fan controller from <u><a href="../../../../allskyx/2023/01/02/post8.html" style="color:black">this post</a></u> (remember that I told you to wait and see?)  
+A little magic, exporting to <u><a href="https://jlcpcb.com/" style="color:black">JLCPCB</a></u> which can be done directly through EasyEDA, and apparently the entire thing cost me a ridiculous staggering amount of... wait for it... 4.4 Euros including 5 pieces each and shipping to germany that took 6 days... amazing!   
+
+After a very long waiting, 6 days, I got it!   
+
+<img src="/img/allskyx_post9/7.jpg" style="width: 70%; margin: auto; display: block;">  
+  
+
+And it's beautiful... just look at it... Here's the before and after, ohh this will make my life so much easier when I model the 3D casing.  
+
+<img src="/img/allskyx_post9/8.jpg" style="width: 100%; margin: auto; display: block;">  
+
+
+Now for those who want the PCB, I still haven't decided if I'm going to release the PCB files to the public, or send it to you in exchange for a small donation 🙃  
+Let me know what you think.  
+  
+  
+Thanks for reading!  
+~Tal 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

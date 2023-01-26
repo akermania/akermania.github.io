@@ -37,7 +37,7 @@ The wiring is pretty much straight forward...kidding, not really, this is how it
 A mess of wires, but that's fine... that's fine... don't worry I got you. 
 Here is how it should look like :   
 
-<img src="/img/allskyx_post6/3.jpg" style="width: 100%; margin: auto; display: block;"> 
+<img src="/img/allskyx_post6/3.jpg" style="width: 70%; margin: auto; display: block;"> 
   
 Make yourself comfortable and try not to blow anything up.  
 Alternatively, if you're lazy you can fast forward to my post about the PCB making.   

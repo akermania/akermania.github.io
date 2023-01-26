@@ -28,7 +28,7 @@ I will focus on that in this post as the other sensors will have their own post 
 We have two SHT31, BMP280, MLX90614, DHT22, DS18B20 and a blugidiblu43 (I made up the last one, because why not)  
 
 
-<img src="/img/allskyx_post4/2.jpg" style="width: 90%; margin: auto; display: block;">   
+<img src="/img/allskyx_post4/2.jpg" style="width: 70%; margin: auto; display: block;">   
   
 
 The SHT31, BMP280 and MLX90614 sensors have I2C interface, the DHT22 and the DS18B20 have single data pins - if you did a "what?" face while reading this sentence, I recommend reading an article or watching a YouTube video just to understand what's what.   
@@ -235,7 +235,7 @@ fig.savefig('sensors.png')
 </details>  
 
 
-<img src="/img/allskyx_post4/5.jpg" style="width: 100%; margin: auto; display: block;">  
+<img src="/img/allskyx_post4/5.jpg" style="width: 70%; margin: auto; display: block;">  
 
 
 
@@ -246,7 +246,7 @@ I found some interesting things:
 I also wanted to check the highest Delta between the sensors and the peak was 0.86C which is very good, a calibration should solve this.  
 
 
-<img src="/img/allskyx_post4/6.jpg" style="width: 100%; margin: auto; display: block;">  
+<img src="/img/allskyx_post4/6.jpg" style="width: 70%; margin: auto; display: block;">  
   
 I am now the master of sensors!  
 Next step is to calibrate them, stay tuned for next posts;  

@@ -184,6 +184,11 @@ header.masthead {
 
 @media (min-width: 992px) {
 
+
+    .container, .container-sm, .container-md, .container-lg, .container-xl {
+      max-width: 1500px;
+    }
+
     #navlogo{
         width: 35px;
         bottom: 23px;

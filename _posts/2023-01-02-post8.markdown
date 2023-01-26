@@ -33,12 +33,12 @@ If you decide to ditch the fun and buy a 3-wire fan (Booo!), you can skip the ne
 After entering my Dexter's Laboratory mode, wiring stuff, and blowing up stuff it's done!  
 Here is the wiring diagram:  
 
-<img src="/img/allskyx_post8/1.jpg" style="width: 100%; margin: auto; display: block;">  
+<img src="/img/allskyx_post8/1.jpg" style="width: 70%; margin: auto; display: block;">  
 
 
 And after soldering everything together on a prototype board it will look like this: 
 
-<img src="/img/allskyx_post8/2.jpg" style="width: 100%; margin: auto; display: block;">  
+<img src="/img/allskyx_post8/2.jpg" style="width: 70%; margin: auto; display: block;">  
 
 
 Don't worry! it will not look this ugly when I'm done with it, hint - keep reading my next posts!  
