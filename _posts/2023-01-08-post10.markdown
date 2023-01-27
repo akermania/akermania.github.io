@@ -2,12 +2,12 @@
 layout: post
 title:  "3D Design"
 subtitle: "A journey towards perfection"
-date: 2023-01-25 17:00:00 +0100
+date: 2023-01-08 17:00:00 +0100
 background: /img/posts/1.jpg
 categories: [AllSkyX]
 author: Tal Akerman
 project: AllSkyX
-image: /img/allskyx_post10/AllSkyX.gif
+gif: /img/allskyx_post10/AllSkyX.gif
 ---
 <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
@@ -26,8 +26,11 @@ So my first draft was, lets call it, well I don't even know how to call it:
 But the idea is very simple -  two bodies, one that contains the brain (....................... C...an't...hold...........it......... Ahhhhhhh...... KRANG)  
 *If you didn't understand the reference it means that you are not following - head back to <u><a href="../../../../allskyx/2022/12/23/post3.html" style="color:black">this post</a></u>   
 
-Back to our topic, so as I said one contains the systems that basically needs to be sealed - all the electronics like the RPi, <u><a href="../../../../allskyx/2023/01/05/post9.html" style="color:black">the fabulous PCB</a></u>, the camera, etc.  
-The Second body contains stuff that should be exposed to the air like the, well, air sensor, one of the SH31 sensors, the clouds sensor and of course the rain sensor.  
+Back to our topic, so as I said one contains the systems that basically needs to be sealed - all the electronics like the RPi, <u><a href="../../../../allskyx/2023/01/05/post9.html" style="color:black">the fabulous PCB</a></u>, the camera, etc. and on the bottom a fan to circulate the air inside when needed.  
+The Second body contains stuff that should be exposed to the air like the, well, air sensor, one of the SH31 sensors, the clouds sensor and of course the rain sensor, in one side it
+have sort of "shutters" to get the air inside. 
+Both bodies will contains heaters in key places to avoid dew forming inside, on the dome, and on the rain sensor.  
+Connection between the bodies are IP68 rated SP13 as well as the 12V connection.  
 
 I wanted to make everything fit like a glove, so I searched for CAD files for each and every component/sensor that the system contains and built around it.   
 Some were found, and some I had to design myself such as the ASI camera, the PCB, the dome and more.  
@@ -36,7 +39,8 @@ Some were found, and some I had to design myself such as the ASI camera, the PCB
 
 
 
-Ease of use was also important so it will be easy to disassemble if needed; And the most important thing was to keep the dimensions to fit my Ender 3 v2 3D printer.  
+Ease of use was also important so it will be easy to disassemble if needed; And the most important thing was to keep the dimensions to fit my Ender 3 v2 3D printer.
+The connetions between the components are done with screws, and a seal printed from TPU material (yes just like in your Lock-Lock boxes) that will make the system completly water tight.   
  
  <img src="/img/allskyx_post10/3.jpg" style="width: 80%; margin: auto; display: block;">   
 

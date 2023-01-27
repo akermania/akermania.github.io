@@ -101,6 +101,10 @@ header.masthead {
     height: 60px;
   }
 
+  .gif-post-home {
+    height: 70px;
+  }
+
   .image-post-home {
     height: 70px;
   }
@@ -201,12 +205,16 @@ header.masthead {
 
 @media (min-width: 992px) {
 
-  .image-post-home {
+  .gif-post-home {
     width: 40%;
     position: inherit;
     margin-top: -72px;
   }
 
+  .image-post-home {
+    height: 130px;
+    margin-top: -56px;
+  }
 
     .image-featured {
       height: 80px;

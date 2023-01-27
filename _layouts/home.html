@@ -92,10 +92,14 @@ layout: default
         <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
             <h2 class="post-title">{{ post.title }}</h2>
-
-            {% if post.image %}
+            
+            {% if post.gif %}
             <div  style="float: right; position: inherit;">
-              <img src="{{post.image}}"  class="image-post-home float-right"><img>
+              <img src="{{post.gif}}"  class="gif-post-home float-right"><img>
+            </div>
+            {% elsif post.image %}
+            <div  style="float: right; position: inherit;">
+              <img src="{{post.image}}" class="image-post-home"><img>
             </div>
             {% endif %}
 

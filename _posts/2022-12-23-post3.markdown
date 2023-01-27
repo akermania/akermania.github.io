@@ -57,6 +57,7 @@ If this guarantee doesn't exists - change the Shipping method to "AliExpress Sta
 
 
 I chose a store with good reviews and started going over all the sensors it offers, well, it took me about 6 hours but I ordered a bunch of sensors, a few of each... you know... because I need it... for stuff ... and it's REALLY cheap!  
+<span><font style="font-weight: bold">Pre-Note - </font></span> I'm writing this post at early stage of the design, so things <b>WILL</b> change, at the end I will publish a full list of parts I used - a good reason to keep following 🙂  
 <span><font style="font-weight: bold">Note - </font></span>I'm publishing the links to buy each component, but pay attention that the item price and shipping can vary depending on your location  
 <span><font style="font-weight: bold">Another note - </font></span>these are not affiliated links  
 <span><font style="font-weight: bold">Another note_final - </font></span>when writing this post, I still didn't design the case, so it will not contain the parts for it. search for the post with the case design.  

@@ -1,0 +1,60 @@
+---
+layout: post
+title:  "A dream to reality"
+subtitle: "3D printing and fighting PETG to the end"
+date: 2023-01-25 17:00:00 +0100
+background: /img/posts/1.jpg
+categories: [AllSkyX]
+author: Tal Akerman
+project: AllSkyX
+image: /img/allskyx_post11/10.jpg
+---
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<img src="/img/allskyx_post11/10.jpg" style="width: 80%; margin: auto; display: block;">  
+
+Another fun part is to transform all this writing to reality - we wired everything, wrote the code, calibrated, tested, designed and now we need to print our casing.   
+For this I'm using my Creality Ender 3 v2 3D printer and decided to go with PETG - which is a much stronger material from PLA for example and should survive outside and protect our precious electronics.    
+  
+Unfortunately, PETG is also the devil's favorite and some will say it's what Hell is made of - a Gooey, stringy, nozzle blocking, and yet non-sticky material.  
+After trial(s) and error(s) I concluded that the out-of-the-box printer components are either not good enough for my needs, or not working as it should;   
+For example, the nozzle gets clogged all the time, the drivers are getting too hot due to the motherboard's louzy location, the temperature can't stay consistent without a proper enclosure and more...  
+
+All these issues bring bad results such as layer shifting, motors missing steps if the drivers are too hot, extra power consumption and the list goes on.     
+So I decided to branch my project and upgrade my printer (which I will write about the process in the blog in the future probably) with a DIY enclosure, Creality's "Sprite" all-metal direct-drive extruder, dual Z-axis, 4.2.7 motherboard that was completely detached from the printer and placed outside the enclosure in a printed box with a big-ass Noctua fan to keep it cool, same was done for the PSU.  
+
+
+<img src="/img/allskyx_post11/1.jpg" style="width: 50%; float:left; padding:10px; margin: auto;"><img src="/img/allskyx_post11/2.jpg" style="width: 50%; float:left; padding:10px; margin: auto; margin-bottom: 30px">     
+
+
+
+
+This upgrade brought peace and quiet - each print is almost perfect, and the PETG is now easy to print as PLA.   
+Starting with the internal components tray:     
+
+<img src="/img/allskyx_post11/3.jpg" style="width: 50%; padding:10px; margin: auto; margin-left: 10%;"> 
+<img src="/img/allskyx_post11/4.jpg" style="width: 29%; padding:10px; margin: auto;">  
+<img src="/img/allskyx_post11/5.jpg" style="width: 40%; padding:10px; margin: auto; margin-left: 10%;"> 
+<img src="/img/allskyx_post11/6.jpg" style="width: 40%; padding:10px; margin: auto;">  
+
+
+The bottom of the casing that also holds the tray:  
+
+<img src="/img/allskyx_post11/7.jpg" style="width: 80%; margin: auto; display: block;"> 
+
+The top disk for the dome:  
+
+<img src="/img/allskyx_post11/8.jpg" style="width: 40%; padding:10px; margin: auto; margin-left: 10%;"> 
+<img src="/img/allskyx_post11/9.jpg" style="width: 40%; padding:10px; margin: auto;">  
+
+<img src="/img/allskyx_post11/10.jpg" style="width: 80%; margin: auto; display: block;"> 
+
+
+Things are looking good, and the printing continues!   
+We're almost done, keep following!  
+
+~Tal 
