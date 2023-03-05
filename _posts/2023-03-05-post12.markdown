@@ -1,0 +1,25 @@
+---
+layout: post
+title: "The green light of death"
+subtitle: "Oh boy it's going to take a while..."
+date: 2023-03-05 12:00:00 +0100
+background: /img/posts/1.jpg
+categories: [AllSkyX]
+author: Tal Akerman
+project: AllSkyX
+---
+
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+Just when everything went well, my (only) RPi went dead without any possibility of rescue (the green light of death, or SDRAM failure, it wasn't decided yet on COD)...  
+There is literally no RPi4 stock anywhere, and the shady stores or private people are selling it at outrageous prices.
+
+So unless you have an RPi4 to sell or donate, it's probably going to be a while until I will get my hands on a new one, and until then - the project is on halt. 😓
+
+<img src="/img/allskyx_post12/1.png" style="width: 80%; margin: auto; display: block;">
+
+Hope to bring good news soon...  
+~Tal
