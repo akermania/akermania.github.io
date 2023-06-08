@@ -1,0 +1,33 @@
+---
+layout: post
+title: "First results are here!"
+subtitle: "Ahh yes, finally"
+date: 2023-06-07 12:00:00 +0100
+background: /img/posts/1.jpg
+categories: [AllSkyX]
+author: Tal Akerman
+project: AllSkyX
+image: /img/allskyx_post15/1.jpg
+---
+
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+Wow!
+I can't believe this is actually finally happening!  
+This is from the very first night
+
+<img src="/img/allskyx_post15/1.jpg" style="width: 100%;">
+
+<video width="100%" height="400" controls>
+  <source src="/img/allskyx_post15/3.mp4" type="video/mp4">
+</video>
+
+As described in the previous posts, our system is saving all the sensors data in InfluxDB.  
+This data is then being used by Grafana dashboard to show us insights based on historical data.
+
+I've uploaded to the Git repository the Grafana.json file which contains the first dashboard and you can start from there.
+
+<img src="/img/allskyx_post15/2.jpg" style="width: 100%;">

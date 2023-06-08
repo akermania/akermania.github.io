@@ -1,0 +1,48 @@
+---
+layout: post
+title: "Assembly and wiring"
+subtitle: "The horror..."
+date: 2023-06-06 12:00:00 +0100
+background: /img/posts/1.jpg
+categories: [AllSkyX]
+author: Tal Akerman
+project: AllSkyX
+image: /img/allskyx_post14/7.jpeg
+---
+
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+Now that we're back on track, the real fun begins - wiring the entire thing, and I'm already starting to regret this...  
+We'll need a lot of wires, and we'd prefer something ready with all the pins but apparently no one wants to do it, so we're stuck with this job.
+
+I ordered 8,5,3 and 2 core 26AWG wires, a set of JST XH2.54 connectors with 2,3,4,5 pins, Dupont connectors kit and crimp tool, SP13 IP68 plugs with 4 and 9 pins (I'll post more details in the final BOM).
+
+The idea is to use the JST XH2.54 connectors to connect between the sensors and PCB for easy replacement or upgrades.  
+The SP13 connectors are for the power delivery to the system, and the connection between the small side housing to the main case - that way I can attach and detach it whenever I need plus it will be more weather proof and wire mess.
+
+<img src="/img/allskyx_post14/1.jpeg" style="width: 40%; ">
+<img src="/img/allskyx_post14/2.jpeg" style="width: 40%;">
+
+<img src="/img/allskyx_post14/3.jpeg" style="width: 40%; ">
+<img src="/img/allskyx_post14/4.jpeg" style="width: 40%;">
+
+I needed a precision of a brain surgeon and obviously once you think you're done things start to get harder - bad crimping, bad soldering, bad... just bad.   
+Just look at this mess
+
+<img src="/img/allskyx_post14/5.jpeg" style="width: 45%; ">
+<img src="/img/allskyx_post14/6.jpeg" style="width: 45%;">
+
+But after days of working, soldering, crimping, cursing, connecting, checking and other present participle words, I didn't finish. 
+I had to do more of it for a few more days to get everything together and finally! It's alive!
+
+<img src="/img/allskyx_post14/7.jpeg" style="width: 80%;">
+
+It's time to fire up this thing and start collecting some data !
+
+<img src="/img/allskyx_post14/8.jpeg" style="width: 80%;">
+
+We're there !!  
+~Tal

@@ -1,0 +1,25 @@
+---
+layout: post
+title: "A nice surprise"
+subtitle: "There's still hope"
+date: 2023-06-05 12:00:00 +0100
+background: /img/posts/1.jpg
+categories: [AllSkyX]
+author: Tal Akerman
+project: AllSkyX
+---
+
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+About 3 months ago, I got an email from a stranger that read my blog, let's call him Travis. 
+Travis was impressed by this project and offered to send me his Raspberry Pi 4B 4GB as a gift (!!!)   
+To be honest, I completely forgot about it, and out of the blue a package came in last week - behold ! It's a new Raspberry Pi!
+
+<img src="/img/allskyx_post13/1.jpg" style="width: 40%; margin: auto; display: block;">
+
+Already over the weekend I installed everything that was needed and I'm back !
+
+Thank you Travis!
