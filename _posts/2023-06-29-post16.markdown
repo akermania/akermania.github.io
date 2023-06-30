@@ -1,0 +1,76 @@
+---
+layout: post
+title: "Final BOM"
+subtitle: "Last post for this project"
+date: 2023-06-07 12:00:00 +0100
+background: /img/posts/1.jpg
+categories: [AllSkyX]
+author: Tal Akerman
+project: AllSkyX
+---
+
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+Now that we have built our Technodrom, and it is mAgNIfiCeNt - as promised I'm publishing all the materials and hardware I have used.
+I hope that this is everything you will need.
+
+| Component                                             | Quantity | Notes                                                                                         |
+| ----------------------------------------------------- | -------- | --------------------------------------------------------------------------------------------- |
+| Raspberry Pi 4                                        | 1        | at least 4GB                                                                                  |
+| Arduino Nano                                          | 1        | Get yourself a few just in case                                                               |
+| ZWO Camera                                            | 1        | I used ASI678MC + the lens it is coming with                                                  |
+| Breadboard and wires                                  | 1        | Basically a development kit                                                                   |
+| PETG Spool                                            | 2        | about 2KG and you should have extra left                                                      |
+| TPU Spool                                             | 1        | You don't need a lot                                                                          |
+| 3D Printer                                            | 1        |                                                                                               |
+| 3D Files                                              | 1        | <u><a href="../../../../allskyx/2023/01/08/post10.html" style="color:black">this post</a></u> |
+| PCBs                                                  | 1        | <u><a href="../../../../allskyx/2023/01/05/post9.html" style="color:black">this post</a></u>  |
+| Soldering kit                                         | 1        | Iron, wires, paste, hot air gun is also recomended                                            |
+| Wiring tools                                          | 1        | to strip wires, and crimp connections                                                         |
+| JST XH2.54 wire cable connectors                      | 10 each  | 2,3,4,5 connectors - https://a.aliexpress.com/_EvHTPjf                                        |
+| Dupont connector kit + pins                           | 1        | https://a.aliexpress.com/_EzN0Dut                                                             |
+| SP13 IP68 9Pin                                        | 3        | Male and female - https://a.aliexpress.com/_EzAuP57                                           |
+| SP13 IP68 4Pin                                        | 1        | Male and female - https://a.aliexpress.com/_EzAuP57                                           |
+| 2-core cable 26AWG                                    | 2 meters | https://a.aliexpress.com/_EvHYBz7                                                             |
+| 3-core cable 26AWG                                    | 5 meters |                                                                                               |
+| 5-core cable 26AWG                                    | 5 meters |                                                                                               |
+| 8-core cable 26AWG                                    | 2 meters | https://a.aliexpress.com/_EQ1EVmV                                                             |
+| 2.54mm single row 15P header                          | 2        | https://a.aliexpress.com/_EGsB3eH                                                             |
+| mini USB UP to USB                                    | 1        | https://a.aliexpress.com/_EQXni4V                                                             |
+| PG7 cable gland                                       | 1        | https://a.aliexpress.com/_EJb8nTJ                                                             |
+| 5v fan 40x40x10mm                                     | 2        |                                                                                               |
+| Raspberry Pi fan kit                                  | 1        |                                                                                               |
+| Telesin Dome                                          | 1        | https://www.ebay.de/itm/293281323175                                                          |
+| GT2 closed loop belt                                  | 1        | 200mm                                                                                         |
+| GT2 pulley                                            | 1        | 20 teeth 5mm bore                                                                             |
+| Brass hot insert                                      | 100      | M2 (OD3.5mm) length 4mm https://a.aliexpress.com/_EGgWlG1                                     |
+| Brass hot insert                                      | 50       | M4 (OD6mm) length 5mm                                                                         |
+| Brass hot insert                                      | 50       | M3 (OD4.2mm) length 5mm                                                                       |
+| Brass hot insert                                      | 50       | M3 (OD5mm) length 4mm                                                                         |
+| Brass hot insert                                      | 50       | M5 (OD7mm) length 5mm                                                                         |
+| Brass hot insert                                      | 50       | M3 (OD5mm) length 5mm                                                                         |
+| Brass hot insert                                      | 50       | M2 (OD3.5mm) length 4mm                                                                       |
+| Hex brass thread                                      | 30       | M3 (thread 6mm), length 10mm - https://a.aliexpress.com/_EGeHfy1                              |
+| Hex brass thread                                      | 30       | M2 (thread 4mm), length 10mm                                                                  |
+| Hex socket flat head screw set                        | 1        | https://a.aliexpress.com/_EGBtK5r                                                             |
+| 5v 4 channel relay                                    | 1        | https://a.aliexpress.com/_EHULguH                                                             |
+| Rain sensor                                           | 1        | https://a.aliexpress.com/_EuvYAq1                                                             |
+| SHT-31 Temp + Hum. Sensor                             | 2        | Order more for backup - https://a.aliexpress.com/_ExNSYHJ                                     |
+| TSL2591 Digital Light Sensor                          | 1        | https://a.aliexpress.com/_Ewnkhut                                                             |
+| DC-DC Step down                                       | 1        | "XL6009 Blue good" - https://a.aliexpress.com/_Ewept25                                        |
+| MQ-135 Air Quality Sensor                             | 1        | https://a.aliexpress.com/_EuDt1e9                                                             |
+| DS18B20 Temp. Sensor                                  | 1        | https://a.aliexpress.com/_Exi1rRJ                                                             |
+| BMP280 Barometric Pressure sensor                     | 1        | https://a.aliexpress.com/_EwJpmf7                                                             |
+| MLX90614 Infrared Temp. Sensor                        | 1        |                                                                                               |
+| TSL237 Light Requency sensor                          | 1        |                                                                                               |
+| 25 degrees lens                                       | 1        | https://www.aliexpress.com/item/33004388989.html                                              |
+| 11mm diameter 650nm IR filter                         | 1        |                                                                                               |
+| 5V 28BYJ-48 Stepper motor and a ULN2003 driver module | 1        |                                                                                               |
+
+Next project is already in progress!
+If you got this far - Thank you, I hope you enjoyed as much as I did !
+
+~Tal
