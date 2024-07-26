@@ -1,0 +1,123 @@
+---
+layout: post
+title: "Ready to pH!"
+subtitle: "Final results and instructions"
+date: 2024-07-10 12:00:00 +0100
+background: /img/posts/1.jpg
+categories: [pH-Controller]
+author: Tal Akerman
+project: pH-Controller
+---
+
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+Here we are, PCBed the PCB, 3D printed the encloser, soldered everything together and lo and behold!
+Your own smart pH controller! Yes! in 1/5 of the cost and x5 the fun!
+
+I opened a GoFundMe project here - <u><a style="color:black; font-style: italic;" href="https://gofund.me/360e19cd">https://gofund.me/360e19cd</a></u>
+You can donate or buy me a beer because you found this project helpful.
+
+<b>For those who don’t have the knowledge, equipment, or time to build this magnificent project – I’ve created a spreadsheet where you can fill you Email.
+I will personally make a minimum of 100 units of the pH controller at the price of 180 Euro each.
+I know it is a bit more than what you would spend if you do it yourself, but this is the best I can do.
+If you are interested please sign your Email on this list and I will contact you if enough people will sign up.</b>
+<u><a style="color:black; font-style: italic;" href="https://docs.google.com/spreadsheets/d/10T0bMkYYCJ1mstqOf0Cxu919_oFjvJmYoqSP8zJgF3E/edit?usp=sharing">Sign up here</a></u>
+
+Note - please keep in mind that there are probably some bugs in the code, if you find one please report it in <u><a style="color:black; font-style: italic;" href="https://github.com/akermania/smart_ph_controller">my GitHub repository</a></u>
+
+Final note - for those who don't have
+
+<img src="/img/phcontroller_post5/1.jpg" style="width: 40%; padding:10px; margin: auto; margin-left: 10% ">
+<img src="/img/phcontroller_post5/3.jpg"  style="width: 40%; padding:10px; margin: auto;">
+<img src="/img/phcontroller_post5/2.jpg" style="width: 500px; margin: auto; display: block;">
+
+Here are some instruction for your first use:
+
+<b>Use only 5v power supply, with minimum 3A rating – No USB power!</b>
+When in the settings menu you can always long press on the SET button to cancel and go back to the main screen.
+
+<b>Pump Calibration: </b>
+
+1. Start by inserting one end of the pump’s silicon tube to a cup with water, and the other end to a measuring cylinder (part of the kit)
+
+2. Power up the controller by connecting it to the power supply, make sure there are readings in the main screen but ignore the values (except the temperature which should be correct).
+
+3. Press the DOWN button (left button) and the pump should start moving liquid from the water cup – keep pressing until the water flows from the other end into the measuring cylinder.
+
+   Note – in case the pump is not moving any liquid first try replacing the ends of the silicon tubes - move the tube that was in the cup of water to the measuring cylinder, and the tube that was in the measuring cylinder to the cup of water and try again.
+   If it still doesn’t help, make sure your power supply has a minimum of 3A rating.
+   If it still doesn’t help, try playing with the off-white silicon tube connected directly to the pump, they are sometimes losing their flexibility due to dry conditions or age in storage.
+   If it still doesn’t help, contact the supplier.
+
+4. Discard all the water in the measuring cylinder, the current state should be that both ends of the silicon tubes are filled with water, so that next time the pump runs it will immediately start dosing.
+
+5. Long press on the SET button (center button) to enter the calibration menu, and short press on the DOWN button to move to the pump settings menu. Keep pressing until the arrow on the left will point the “Calibration” setting. Short press on the SET button and follow the on-screen instructions, the pump will start dosing water to the measuring cylinder and once done using the UP and DOWN buttons set the amount of water measured in the measuring cylinder.
+   Short press on SET to save.
+
+6. To test the results, discard the water from the measuring cylinder, and in the same pump settings menu navigate to the “Test 2ml” and short press on SET, and again SET to confirm – the pump should dose exactly 2ml into your measuring cylinder.
+   If not, you can do the calibration again or change the Flow Rate setting.
+
+7. Remove the silicon tube from the cup of water and go back to the main screen by long press the SET button.
+   Press on the DOWN button to start the pump until there are no more water inside either end of the silicon tubes.
+
+<b>pH Meter Calibration: </b>
+
+1. Get 4.0 and 7.0 calibration solutions for the pH meter calibration (you can get them anywhere).
+2. From the main screen, long press on the SET button to enter the pH calibration screen and follow the on-screen instructions:
+3. Insert and swirl the pH meter probe into distilled or pure water, take it out, shake the excess water, insert the probe into the 4.0 calibration solution and short press on the SET button.
+4. The system will automatically recognize and show 4.0 on the screen.
+5. Insert and swirl the pH meter probe into distilled or pure water, take it out, shake the excess water, and now insert the probe into the 7.0 calibration solution, no need to press SET, the system will automatically recognize and show 7.0.
+6. you can now press on the SET button to save your calibration.
+
+<b>Select pH target: </b>
+
+The pH value that the controller will keep the water at.
+
+1. From the main screen, short press on the SET button (center button).
+2. Select your desired pH target using the UP and DOWN buttons.
+3. Long press on SET to save.
+
+<b>Amount Calibration: </b>
+
+The amount in ml for each pump dose.
+
+1. From the main screen, long press on the SET button (center button) to enter the calibration menu, and short press on the DOWN button to move to the pump settings menu. Keep pressing until the arrow on the left will point the “Amount” setting.
+2. Press SET and select your desired amount in ml for each dose using the UP and DOWN buttons.
+   Note that you want to keep it as low as possible based on how string your pH Down solution is so the system will not overshoot the target pH. Don’t worry, the system will keep dosing every 20 seconds until it reaches the target pH.
+3. Press SET to save.
+
+<b>Wait Time: </b>
+
+Time interval in minutes to wait between each pH correction routine.
+
+1. From the main screen, long press on the SET button (center button) to enter the calibration menu, and short press on the DOWN button to move to the pump settings menu. Keep pressing until the arrow on the left will point the “Wait time” setting.
+2. Press SET and select your desired time in minutes using the UP and DOWN buttons.
+   For example - my circulation pump in my reservoir turns on every two hours, hence I want the routine to start every two hours so the pH down solution will circulate in the water.
+3. Press SET to save.
+
+<b>Buffer: </b>
+
+Set buffer between target pH and current pH, for example if the system dosed hey way to the pH target of 6.3 , and your buffer is 0.2, then it will not kick back again until the current pH will be above 6.5.
+
+1. From the main screen, long press on the SET button (center button) to enter the calibration menu, and short press on the DOWN button to move to the pump settings menu. Keep pressing until the arrow on the left will point the “Buffer” setting.
+2. Press SET and select your desired buffer using the UP and DOWN buttons.
+3. Press SET to save
+
+<b>Show temperature in Celsius or Fahrenheit:</b>
+
+1. From the main screen, short press on the UP button to change between Celsius and Fahrenheit.
+
+<b>FAQ:</b>
+
+- HomeAssistant users - the hardware already contains an ESP32 equipped with Bluetooth and WiFi - you can develop and integrate your configuration if you would like that.
+- When adding pH Down solution it needs to be stirred, how does the system address that - there is a “Wait time” configuration where you can define the intervals when the pH check and adjustment will run; For example my pump in the reservoir runs every two hours, hence I set the “Wait time” to 2 hours as well so the check and adjustment will run at the same time as the pump.
+- What is the overall cost to build the system ? Around 100$.
+- Wouldn’t it be simpler to address your pH drift issues - Yes, but it’s not always that simple, some nutrients/additive just cause the pH to drift, along with temperature fluctuations or even just over time if you’re not home for a long period of time.
+
+That's it! Hope you will learn and enjoy this project as much as I do!
+
+Until next time -  
+~Tal

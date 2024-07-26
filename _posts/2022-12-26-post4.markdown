@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Sensors party"
+title: "Sensors party"
 subtitle: "Learning the senors and their compatibility"
 date: 2022-12-26 12:00:00 +0100
 background: /img/posts/2.jpg
@@ -8,50 +8,49 @@ categories: [AllSkyX]
 author: Tal Akerman
 project: AllSkyX
 ---
+
 <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 
-<img src="/img/allskyx_post4/1.gif" style="width: 50%; margin: auto; display: block;">  
+<img src="/img/allskyx_post4/1.gif" style="width: 50%; margin: auto; display: block;">
 
+One eternity later all the sensors have arrived, kidding, it took less than 15 days if you followed my instructions in the previous post.
 
-One eternity later all the sensors have arrived, kidding, it took less than 15 days if you followed my instructions in the previous post.  
-
-So now you have all these, how my wife calls it, little computery things and it looks like you are trying to take over the world, just do yourself a favor - don't take it with you through the airport security 🙃.   
+So now you have all these, how my wife calls it, little computery things and it looks like you are trying to take over the world, just do yourself a favor - don't take it with you through the airport security 🙃.
 
 Ok let's get serious, at first the Arduino wasn't part of the plan, I thought that everything is going to be connected to the Raspberry Pi, but through the process I learned that I will need extra hardware to convert some of the Pi digital pins to analog pins as some of the sensors needs it, and also the Python libraries... the dependencies... It's like 3% coding and 97% understanding what, where, how package you need @!#$.  
 But I still wanted to test the sensors and see how they work and what kind of output they give;  
 So if you're here just to copy/paste the code - this post is not for you, unless you're weird like me and you want "to test" your sensors.  
 What I was mostly interested in was the readings of the temperature/humidity sensors (which if you're following closely, we have a lot).  
 I will focus on that in this post as the other sensors will have their own post since they are a bit more complex.  
-We have two SHT31, BMP280, MLX90614, DHT22, DS18B20 and a blugidiblu43 (I made up the last one, because why not)  
-
+We have two SHT31, BMP280, MLX90614, DHT22, DS18B20 and a blugidiblu43 (I made up the last one, because why not)
 
 <img src="/img/allskyx_post4/2.jpg" style="width: 70%; margin: auto; display: block;">   
-  
 
-The SHT31, BMP280 and MLX90614 sensors have I2C interface, the DHT22 and the DS18B20 have single data pins - if you did a "what?" face while reading this sentence, I recommend reading an article or watching a YouTube video just to understand what's what.   
-  
+
+The SHT31, BMP280 and MLX90614 sensors have I2C interface, the DHT22 and the DS18B20 have single data pins - if you did a "what?" face while reading this sentence, I recommend reading an article or watching a YouTube video just to understand what's what.
+
 <img src="/img/allskyx_post4/3.jpg" style="width: 200px; margin: auto; display: block;">  
-  
+
 
 I wanted to collect data overnight from all the sensors and get some insights - all the I2C sensors were connected together to the SDA and SCL Pi connections (GPIO 2 and 3), the DHT22 data to Pin 11 (GPIO 17) and the DS18B20 was connected to pin 7 (GPIO 4); All the GND and VCC were connected together to 3V power and GND pins on the Pi.  
 It's time to turn on the Pi and write the code... Boom!!!  
-Something just exploded.. sniff sniff, it's the DHT22 (remember that I told you it's a shity sensor?)  
+Something just exploded.. sniff sniff, it's the DHT22 (remember that I told you it's a shity sensor?)
 
-Apparently I connected the VCC and GND of this sensor to the opposite sides.. oh well lucky I have 3 of them. I wired a new one correctly this time, and like I'm handling a bomb in a 90's movie turned on the Pi - Phewww, looks like I'm still here!  
+Apparently I connected the VCC and GND of this sensor to the opposite sides.. oh well lucky I have 3 of them. I wired a new one correctly this time, and like I'm handling a bomb in a 90's movie turned on the Pi - Phewww, looks like I'm still here!
 
-Anddd up to the next issue - apparently you need to be a NASA engineer to get the DS18B20 to work on the Pi, if you really want to - you can find instructions <a href="https://pimylifeup.com/raspberry-pi-temperature-sensor/" style="color: black">here</a> on how to get it to work.  
+Anddd up to the next issue - apparently you need to be a NASA engineer to get the DS18B20 to work on the Pi, if you really want to - you can find instructions <a href="https://pimylifeup.com/raspberry-pi-temperature-sensor/" style="color: black">here</a> on how to get it to work.
 
 Now this is done, up to the next thing - the two SHT31 sensors have the same address (0x44), so how do I get them to work while they are both connected?  
-Good question, said no one on Google;  Apparently there is an ADDR pin on the sensor, that once you put it on HIGH it's reality changes and it thinks it's better than everyone, but most importantly, the address changes to 0x45 ! 
+Good question, said no one on Google;  Apparently there is an ADDR pin on the sensor, that once you put it on HIGH it's reality changes and it thinks it's better than everyone, but most importantly, the address changes to 0x45 !
 
 Finally! We are now good to go with the code, don't forget that you need to be a Ninja and install all the Python packages (see imports in the attached code below, use pip3 to install them).  
-At first I created a very simple Python script that reads the sensor data every 5 seconds and logs it with a timestamp to a .csv file. 
+At first I created a very simple Python script that reads the sensor data every 5 seconds and logs it with a timestamp to a .csv file.
 
 You can find the code below for your reference;  
-And for those who say - "Oh noo, tHiS coDE iS nOt eFfiCieNt" - add this line to the code, it will me better:  
+And for those who say - "Oh noo, tHiS coDE iS nOt eFfiCieNt" - add this line to the code, it will be better:
 
 {% highlight python %}
 #define TRUE FALSE
@@ -59,7 +58,7 @@ And for those who say - "Oh noo, tHiS coDE iS nOt eFfiCieNt" - add this line to
 
 <details><summary markdown="span">Click here to expand the code</summary>
 {% highlight python %}
-#!/usr/bin/python 
+#!/usr/bin/python
 
 import time
 import board
@@ -72,39 +71,48 @@ from mlx90614 import MLX90614
 import adafruit_sht31d
 import csv
 from datetime import datetime
-import RPi.GPIO as GPIO  
-
-
+import RPi.GPIO as GPIO
 
 i2c = board.I2C()
+
 # Connect to DHT22
+
 dht22 = adafruit_dht.DHT22(board.D17)
+
 # Connect to BMP280
+
 bmp280_sensor = adafruit_bmp280.Adafruit_BMP280_I2C(i2c, address=0x76)
+
 # Connect to MLX90614
+
 bus = SMBus(1)
 mlx90614_sensor = MLX90614(bus, address=0x5A)
+
 # Connect to SHT31Da
+
 sht31a_sensor = adafruit_sht31d.SHT31D(i2c, address=0x44)
+
 # Connect to SHT31Db
+
 GPIO.setup(board.D27, GPIO.OUT, initial=GPIO.HIGH)
 sht31b_sensor = adafruit_sht31d.SHT31D(i2c, address=0x45)
+
 # Connect to DS18B20
+
 os.system('modprobe w1-gpio')
 os.system('modprobe w1-therm')
 base_dir = '/sys/bus/w1/devices/'
-device_folder = glob.glob(base_dir + '28*')[0]
+device_folder = glob.glob(base_dir + '28\*')[0]
 device_file = device_folder + '/w1_slave'
 
-
-
 ## DS18B20 Temp
+
 def read_temp_raw():
     f = open(device_file, 'r')
     lines = f.readlines()
     f.close()
     return lines
- 
+
 def read_temp():
     lines = read_temp_raw()
     while lines[0].strip()[-3:] != 'YES':
@@ -116,13 +124,17 @@ def read_temp():
         temp_c = float(temp_string) / 1000.0
         return temp_c
 
-
 # Open CSV file
+
 f = open('/home/pi/scripts/sensors_data.csv', 'w')
 writer = csv.writer(f)
+
 # Write CSV header
+
 header = ['Time','BMP280 Temp', 'DHT22 Temp', 'DHT22 Humidity','DS18B20 Temp','MLX90614 Ambient Temp','MLX90614 Object Temp','SH31a Temp','SH31a Humidity','SH31b Temp','SH31b Humidity']
+
 # Close file
+
 f.close()
 
 while True:
@@ -130,48 +142,47 @@ while True:
     f = open('/home/pi/scripts/sensors_data.csv', 'a')
     writer = csv.writer(f)
     # Get current time
-    now = datetime.now()
-	### BMP280
+    now = datetime.now() ### BMP280
     try:
         bmp280_temp =  round(bmp280_sensor.temperature,2)
     except Exception as e:
         pass
 
-    ### DHT22
+### DHT22
     try:
         dht22_temp = round(dht22.temperature,2)
         dht22_humidity = round(dht22.humidity,2)
     except Exception as e:
         pass
 
-    ### DS18B20
+### DS18B20
     try:
         ds18b20_temp = round(read_temp(),2)
     except Exception as e:
         pass
 
-    ### MLX90614 
+### MLX90614
     try:
         mlx90614_temp_ambient = round(mlx90614_sensor.get_amb_temp(),2)
         mlx90614_temp_object = round(mlx90614_sensor.get_obj_temp(),2)
     except Exception as e:
         pass
 
-    ### SH31a
+### SH31a
     try:
         sht31a_temp = round(sht31a_sensor.temperature,2)
         sht31a_hummidity = round(sht31a_sensor.relative_humidity,2)
     except Exception as e:
         pass
 
-    ### SH31b
+### SH31b
     try:
         sht31b_temp = round(sht31b_sensor.temperature,2)
         sht31b_hummidity = round(sht31b_sensor.relative_humidity,2)
     except Exception as e:
         pass
 
-    # Write data to CSV
+# Write data to CSV
     writer.writerow([now.strftime("%d-%m-%Y %H:%M:%S"),bmp280_temp,dht22_temp,dht22_humidity,ds18b20_temp,mlx90614_temp_ambient,mlx90614_temp_object,sht31a_temp,sht31a_hummidity,sht31b_temp,sht31b_hummidity])
     # Print data on screen
     print(now.strftime("%d-%m-%Y %H:%M:%S"),bmp280_temp,dht22_temp,dht22_humidity,ds18b20_temp,mlx90614_temp_ambient,mlx90614_temp_object,sht31a_temp,sht31a_hummidity,sht31b_temp,sht31b_hummidity)
@@ -180,14 +191,13 @@ while True:
     time.sleep(5)
 bus.close()
 {% endhighlight %}
-</details>  
 
+</details>
 
 Remember the DHT22, well apparently it thinks I'm in Hell and the temperature is 85 degrees Celsius (yes US, Celsius) so I replaced that one as well.  
-Now after the code was running and nothing else exploded for the entire night (I literally put a smoke sensor next to it just in case...), I had a .csv file full of data and I was ready to put it on a chart just for fun.  
+Now after the code was running and nothing else exploded for the entire night (I literally put a smoke sensor next to it just in case...), I had a .csv file full of data and I was ready to put it on a chart just for fun.
 
-I went back to 2004 and imported MatPlotLib package to draw my glorified chart:  
-  
+I went back to 2004 and imported MatPlotLib package to draw my glorified chart:
 
 <details>
 <summary markdown="span">Click here to expand the code</summary>
@@ -199,8 +209,8 @@ from matplotlib import pyplot as plt
 from datetime import datetime
 from matplotlib.dates import DateFormatter
 
-
 # Make a list of columns
+
 columns = ['Time','BMP280 Temp','DHT22 Temp','DHT22 Humidity','DS18B20 Temp','MLX90614 Ambient Temp','MLX90614 Object Temp','SH31a Temp','SH31a Humidity','SH31b Temp','SH31b Humidity']
 
 dataframe = pd.read_csv('sensors_data.csv')
@@ -218,10 +228,9 @@ ax.plot(dataframe["Time"], dataframe["SH31a Humidity"], label = "SH31a Humidity"
 ax.plot(dataframe["Time"], dataframe["SH31b Temp"], label = "SH31b Temp")
 ax.plot(dataframe["Time"], dataframe["SH31b Humidity"], label = "SH31b Humidity")
 
-
 ax.set(xlabel="Date",
-       ylabel="Temp/Humidity",
-       title="Sensors Data")
+ylabel="Temp/Humidity",
+title="Sensors Data")
 ax.legend(loc='best')
 
 plt.xticks(rotation=45, ha='right')
@@ -229,26 +238,23 @@ plt.xticks(rotation=45, ha='right')
 date_form = DateFormatter("%d-%m-%Y %H:%M:%S")
 ax.xaxis.set_major_formatter(date_form)
 
-
 fig.savefig('sensors.png')
 {% endhighlight %}
-</details>  
 
+</details>
 
-<img src="/img/allskyx_post4/5.jpg" style="width: 70%; margin: auto; display: block;">  
+<img src="/img/allskyx_post4/5.jpg" style="width: 70%; margin: auto; display: block;">
 
+I found some interesting things:
 
-
-I found some interesting things: 
 1. The 3rd DHT22 sensor thinks I'm in a Greek Sauna with twice the humidity (green line in the chart), so it is time to get rid of it for good.
-2. All the sensors are pretty much aligned to each other, sweet !  
+2. All the sensors are pretty much aligned to each other, sweet !
 
-I also wanted to check the highest Delta between the sensors and the peak was 0.86C which is very good, a calibration should solve this.  
-
+I also wanted to check the highest Delta between the sensors and the peak was 0.86C which is very good, a calibration should solve this.
 
 <img src="/img/allskyx_post4/6.jpg" style="width: 70%; margin: auto; display: block;">  
   
 I am now the master of sensors!  
-Next step is to calibrate them, stay tuned for next posts;  
+Next step is to calibrate them, stay tuned for next posts;
 
 ~Tal

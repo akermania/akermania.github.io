@@ -1,0 +1,43 @@
+---
+layout: post
+title: "New Project!"
+subtitle: "Finally found some time to share - Smart pH Controller"
+date: 2024-07-07 12:00:00 +0100
+background: /img/posts/1.jpg
+categories: [pH-Controller]
+author: Tal Akerman
+project: pH-Controller
+---
+
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+I have a few projects that I need to share with you, I’ll start with this one.
+A smart pH controller for your automatic irrigation system!
+
+Wait…What…?
+Isn’t that blog supposed to be for an Astronomy related projects …?
+
+Well yes, you never had to leave your equipment while you’re on vacation and make sure it’s pH is stable? Kidding!
+I have a rule that I follow in both my personal and life and work - if I do it 3 times, the 4th time should be automated.
+So this blog will include all of my cool and not helpful projects for you to read about!
+
+So what is this smart pH Controller?
+
+Glad you asked – you know that situation when you are bored enough to have a garden with various plants, but too lazy to water them so you decide to add an automatic irrigation system and you spend all that money on super-duper nutrients and additives so your plants will love you and then realize that these nutirients and additives mess with the water pH and then you find yourself 3 times a day trying to balance the pH and the the automatic irrigation system becomes just an irrigation system that is not automatic and you rethink about your life choices and how growing a tomato plant is better than just go buying some at the supermarket ?
+Great! So this project is for you!
+
+The general idea is a smart microcontroller connected to a digital pH meter that you put in your water reservoir to get the pH readings.
+Every configured X minutes it will sample the water pH, and if it’s above the configured threshold it will start dosing a pH Down solution to the water until it will reach its target using a digial peristaltic pump.
+
+<img src="/img/phcontroller_post1/1.jpg" style="width: 100%;">
+
+Want to learn how to build it? Keep reading !
+
+--
+I opened a GoFundMe project here - <u><a style="color:black; font-style: italic;" href="https://gofund.me/360e19cd">https://gofund.me/360e19cd</a></u>
+You can donate or buy me a beer because you found this project helpful.
+
+~Tal

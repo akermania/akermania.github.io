@@ -1,0 +1,48 @@
+---
+layout: post
+title: "Making everything pretty"
+subtitle: "PCB and 3D design"
+date: 2024-07-09 12:00:00 +0100
+background: /img/posts/1.jpg
+categories: [pH-Controller]
+author: Tal Akerman
+project: pH-Controller
+---
+
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+Here we are at the final stage of the project – making everything pretty and accessible for everyone.
+
+This stage has (like my wife’s stories), two sub-stages – a PCB that will hold all the internal components nice and tight, and the 3D design for the enclosure that will fit everything in a nice small box for you to be proud at.
+
+The PCB, for those who are new to this, is the Printed Circuit Board that replacing all the wires and holds all the components in place, some of you may call it “The motherboard” if it makes you understand better (it’s not, but I’ll allow it).
+
+<img src="/img/phcontroller_post4/1.1.jpg" style="width: 600px; margin: auto; display: block;">
+
+There are a lot of online services that manufacture it for you, all you need is to upload “Gerber” file and you’re done, usually it will cost around 5$ for 5 boards – why do you need 5? Unless you have 5 friends that needs it, you don’t, it’s just usually the minimum.
+
+Feel free to use JLCPCB services, or any other service you know.
+You can find the files in <u><a style="color:black; font-style: italic;" href="https://github.com/akermania/smart_ph_controller">my GitHub repository</a></u>
+
+<img src="/img/phcontroller_post4/1.jpg" style="width: 30%; padding:10px; margin: auto; ">
+<img src="/img/phcontroller_post4/2.jpg"  style="width: 30%; padding:10px; margin: auto;">
+<img src="/img/phcontroller_post4/3.jpg"  style="width: 30%; padding:10px; margin: auto;">
+
+For the 3D design, well, that is probably my favorite step in every project because it marks the end, and I can also release my inner artist and go crazy with how I want to product will look like depends on its intended usage.
+
+You can find the STL files also in <u><a style="color:black; font-style: italic;" href="https://github.com/akermania/smart_ph_controller">my GitHub repository</a></u>
+
+<img src="/img/phcontroller_post4/5.1.jpg" style="width: 40%; padding:10px; margin: auto; margin-left: 10% ">
+<img src="/img/phcontroller_post4/5.2.jpg"  style="width: 40%; padding:10px; margin: auto;">
+<img src="/img/phcontroller_post4/5.jpg" style="width: 600px; margin: auto; display: block;">
+
+Final results on the next and final post for this project!
+
+--
+I opened a GoFundMe project here - <u><a style="color:black; font-style: italic;" href="https://gofund.me/360e19cd">https://gofund.me/360e19cd</a></u>
+You can donate or buy me a beer because you found this project helpful.
+
+~Tal
