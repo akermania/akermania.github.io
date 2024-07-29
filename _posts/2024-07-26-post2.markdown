@@ -34,6 +34,7 @@ Our main components for the smart pH controller are:
 - <u><a style="color:black; font-style: italic;" href="https://www.amazon.de/-/en/gp/product/B07QHWLTTS">ADC Module ADS1115</a></u> – the analog resolution and accuracy of the ESP32 is not sufficient to get the pH readings accurately so we need to use an external one.
 - <u><a style="color:black; font-style: italic;" href="https://www.aliexpress.com/item/1005004903983565.html">DS18B20 water resistant temperature sensor</a></u> – we will use a mathematical formula to calculate the pH readings with a compensation of the water temperature.
 - <u><a style="color:black; font-style: italic;" href="https://www.aliexpress.com/item/1005003742132830.html">A DC power connector (type DC007B 5.5x2.1mm)</a></u>
+- HDR 1x3 male connectors - you can just take a long one and break it two 3s.
 - 5v power supply (5.5x2.1mm) with at least 3A, please do not try to start it with the USB power because it will not work.
 
 Tool you will need:
@@ -41,7 +42,7 @@ Tool you will need:
 - A brain (any model will do).
 - Soldering tools.
 - A 3D printer for the enclosure.
-- A bunch of M2 screws for the enclosure.
+- A bunch of M2 screws and nuts for the enclosure.
 - A computer to load the software to the microcontroller.
 
 The planned features:
