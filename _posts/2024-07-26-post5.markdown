@@ -17,15 +17,6 @@ project: pH-Controller
 Here we are, PCBed the PCB, 3D printed the encloser, soldered everything together and lo and behold!
 Your own smart pH controller! Yes! in 1/5 of the cost and x5 the fun!
 
-I opened a GoFundMe project here - <u><a style="color:black; font-style: italic;" href="https://gofund.me/360e19cd">https://gofund.me/360e19cd</a></u>
-You can donate or buy me a beer because you found this project helpful.
-
-<b>For those who don’t have the knowledge, equipment, or time to build this magnificent project – I’ve created a spreadsheet where you can fill you Email.
-I will personally make a minimum of 100 units of the pH controller at the price of 180 Euro each.
-I know it is a bit more than what you would spend if you do it yourself, but this is the best I can do.
-If you are interested please sign your Email on this list and I will contact you if enough people will sign up.</b>
-<u><a style="color:black; font-style: italic;" href="https://docs.google.com/spreadsheets/d/10T0bMkYYCJ1mstqOf0Cxu919_oFjvJmYoqSP8zJgF3E/edit?usp=sharing">Sign up here</a></u>
-
 Note - please keep in mind that there are probably some bugs in the code, if you find one please report it in <u><a style="color:black; font-style: italic;" href="https://github.com/akermania/smart_ph_controller">my GitHub repository</a></u>
 
 <img src="/img/phcontroller_post5/1.jpg" style="width: 40%; padding:10px; margin: auto; margin-left: 10% ">
