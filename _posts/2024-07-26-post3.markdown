@@ -66,8 +66,5 @@ The main screen is where you will see the current pH reading, temperature, and t
 
 Next up - PCB and 3D design!
 
---
-I opened a GoFundMe project here - <u><a style="color:black; font-style: italic;" href="https://gofund.me/360e19cd">https://gofund.me/360e19cd</a></u>
-You can donate or buy me a beer because you found this project helpful.
 
 ~Tal
