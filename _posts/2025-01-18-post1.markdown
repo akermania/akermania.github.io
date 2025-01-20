@@ -1,0 +1,36 @@
+---
+layout: post
+title: "Smart Drying & Curing System"
+subtitle: "Another fun project that will make your life easier"
+date: 2025-01-18 12:00:00 +0100
+background: /img/posts/1.jpg
+categories: [Smart Drying & Curing System]
+author: Tal Akerman
+project: Smart Drying & Curing System
+---
+
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<font style="font-weight: bold">Wait, What? A Smart Drying & Curing System?</font>
+
+Okay, hear me out. I know you probably came here expecting another astronomy-related project—telescopes, star trackers, or maybe a guide to building your own moon rover. And you’re right, that’s usually the vibe here.
+
+But have you ever left something unattended only to find it’s not in the pristine condition you left it? If not, congratulations, you’ve mastered life in a way I haven’t. For the rest of us, this post is for you.
+
+Here’s a rule I live by: if I’ve done something three times manually, the fourth time, it’s getting automated. And that’s exactly how we’ve arrived at today’s topic—a project so weirdly practical and nerdy, you’ll want to stick around.
+
+<font style="font-weight: bold">So, What’s This Smart Drying & Curing System About?</font>
+
+Great question! Imagine this: there are things in life that absolutely demand a controlled environment—temperature, humidity, you name it. Not handling this correctly can lead to mold, chaos, or an angry spouse (seriously, don’t underestimate this one).
+
+The idea is simple: grab a wine fridge with a thermoelectric module and take it to the next level. Picture it—like a crossover episode of "Dexter’s Laboratory" and "Home Improvement." Add a humidifier, a dehumidifier, some sensors, relays, and a screen to display all the nerdy stats. Wrap it up in a slick web app that lets you monitor and control everything. Voilà—a terrarium for your stuff!
+
+<img src="/img/smartdrycure_post1/1.jpeg" style="width: 60%; padding:10px; margin: auto; margin-left: 2% ">
+<img src="/img/smartdrycure_post1/2.gif" style="width: 30%; padding:10px; margin: auto;">
+
+And hey, if this sounds a bit random, stick around anyway! You might just find some inspiration—or at least a good laugh. Next time, we’ll dive back into the stars. Unless, of course, I find something else worth automating first. 😉
+
+~Tal

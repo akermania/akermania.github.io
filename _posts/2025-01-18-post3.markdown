@@ -1,0 +1,109 @@
+---
+layout: post
+title: "Assemble (and Disassemble) Everything Together"
+subtitle: "A.K.A. 'Mess.'"
+date: 2025-01-18 12:02:00 +0100
+background: /img/posts/1.jpg
+categories: [Smart Drying & Curing System]
+author: Tal Akerman
+project: Smart Drying & Curing System
+---
+
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+Congratulations, you’ve made it this far! With all the components and tools at your disposal, it’s time to tackle the wiring and connections.
+Remember: while the chances of blowing something up are small, please don’t be the exception. Safety first, chaos later.
+
+<font style="font-weight: bold">Step 1: Solder Wires to the Fridge Buttons</font>
+This is the trickiest part of the build—not because it’s actually hard, but because precision matters.
+
+<i><font style="font-weight: bold">"Do I have to do it?"</font></i>
+
+<i>Short answer: Technically,no , you can skip it. (Though some app features won’t work for you. more on this in next posts) — but seriously, don’t skip it.</i>
+
+<i>Long answer: If you want to unlock all the awesome app features, like science-backed drying programs and dew-point-based magic, you’ll need to complete this step. Otherwise, the app will notify you daily to manually set the fridge’s target temperature, and you’ll miss out on the cool stuff.</i>
+
+<i>Sure, if you’re only want to maintain a constant temperature and just manage humidity, you could skip it. But trust me, you’ll want to set this up to enjoy all the goodies. It’s worth it!</i>
+
+First and foremost:
+
+MAKE SURE THE FRIDGE IS DISCONNECTED FROM THE POWER OUTLET.  
+No DIY project is worth a shocking experience.
+
+Now, locate the button panel inside the fridge (the one with buttons like "Up," "Down," and possibly "Light"). Carefully remove the button board from its enclosure.
+We’re going to solder wires to:
+
+- The Up button
+- The Down button
+- (Optional) The Light button
+- And, of course, the Ground pin
+
+Use a <a href="https://www.aliexpress.com/item/1005006864064523.html">4-core single wire</a>, it will make your life wiring it out of the fridge easier.
+How to Identify the Pins:
+
+Grab a multimeter and set it to the Continuity mode (a.k.a. the “beep beep BEEEEP” setting).
+Place one probe on a random pin of a button and the other probe on a random pin on another button.
+If it beeps: Congrats, you’ve found the Ground pin! Solder a wire to one of these beeping pins.
+The other pin of the same button is the positive pin (make sure it doesn't beep). Solder a wire to this pin for each button you’re working with.
+Pro Tip: If this feels overwhelming, enlist a friend who knows their way around a soldering iron, or shamelessly ask for help. It’s all part of the fun.
+
+Test Your Work: Once everything is soldered, reassemble the button board, plug the fridge back in, and make sure all the buttons still work as they should. If they don’t, retrace your steps—you’ve got this!
+
+Once done you will want to take
+
+<img src="/img/smartdrycure_post3/1.jpeg" style="width: 35%; padding:10px; margin: auto; margin-left: 2% ">
+<img src="/img/smartdrycure_post3/2.jpeg" style="width: 60%; padding:10px; margin: auto;">
+<img src="/img/smartdrycure_post3/3.jpeg" style="width: 300px; margin: auto; display: block;">
+
+<font style="font-weight: bold">Step 2: Strip Down the Dehumidifier</font>
+Now we move on to the dehumidifier. Your mission: extract the module itself.
+
+Remove any boards, wires, buttons, and unnecessary parts.
+The fan? Gone. Replace it with the PWM fan that you bought earlier.
+What you’re left with: the dehumidifier module and two wires (usually red for positive and black for negative), and the new fan and it's wires.
+Why are we doing this? Because we only need the module—it’s the star of the show. Everything else is just extra fluff.
+
+<img src="/img/smartdrycure_post3/4.jpeg" style="width: 35%; padding:10px; margin: auto; margin-left: 2% ">
+<img src="/img/smartdrycure_post3/5.jpeg" style="width: 60%; padding:10px; margin: auto;">
+
+<font style="font-weight: bold">Step 3: Tapping into the Humidifier Controller Module</font>
+See that tiny green thing in the humidifier module? That’s the controller — it has a USB connection for power and a button to turn it on and off with a bunch of other not interesting components.
+But come on, we’re here for automation, right? Manual button-pushing is not for us.
+
+Here’s the game plan:
+
+- Solder a 5V power source directly to the board (look for a 'V+' sign or just '+')
+- Solder a Ground wire (look for a 'V-' sign or just '-')
+- And just like with the fridge buttons, solder a wire to control the button on the module, don't forget to do beep beep beeeeep and annoy your wife.
+
+In the module I used, there are signs for "+" (5V) , "-" (Ground) and two pads bellow where the button is - you need the right one (button control).
+
+<img src="/img/smartdrycure_post3/9.jpeg" style="width: 300px; margin: auto; display: block;">
+
+<font style="font-weight: bold">Step 4: Wire Everything Together</font>
+At this point, you’ve got all your components prepped and ready. It’s time to connect them all!
+
+You can either:
+
+Follow the wiring schema to connect the fridge, dehumidifier module, humidifier (if you’re using one), microcontroller, screen, relays and sensors.
+OR make your life easier: Buy me a beer, and I’ll send you a ready-made PCB with the microcontroller and software pre-installed.
+You can also get the PCB files in my <a href="https://github.com/akermania/Smart-Drying-Curing-System"><u>GitHub Repo</u></a>
+
+<img src="/img/smartdrycure_post3/7.png" style="width: 100%; margin: auto; display: block;">
+<img src="/img/smartdrycure_post3/6.jpeg" style="width: 35%; padding:10px; margin: auto; margin-left: 2% ">
+<img src="/img/smartdrycure_post3/8.jpeg" style="width: 60%; padding:10px; margin: auto;">
+
+And there you have it! You’re well on your way to creating a fully operational Smart Drying & Curing System.
+Next, we’ll get into the interesting stuff. Until then, good luck, and Don’t set yourself—or anything else—on fire.
+
+---
+
+<div style="background: darkgray;padding: 31px;border-radius: 15px;">
+<font style="font-weight: bold">Want the PCB, microcontroller, components, 3D prints and pre-installed software delivered to you?</font>
+<a href="mailto:akerman@duck.com"><u>Send me an email</u></a> or use the <a href="/contact"><u>contact form</u></a>
+</div>
+
+~Tal

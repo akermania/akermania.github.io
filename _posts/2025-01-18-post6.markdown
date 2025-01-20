@@ -1,0 +1,92 @@
+---
+layout: post
+title: "Where Code Meets Cool: Your Fridge, Upgraded."
+subtitle: "Click, Swipe, Chill — Controlling Everything Just Got Fun."
+date: 2025-01-18 12:05:00 +0100
+background: /img/posts/1.jpg
+categories: [Smart Drying & Curing System]
+author: Tal Akerman
+project: Smart Drying & Curing System
+---
+
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+You can get the .bin file in my <a href="https://github.com/akermania/Smart-Drying-Curing-System"><u>GitHub Repo</u></a>
+
+This is it, folks—the final piece of the puzzle: the software, the brain behind the box. It’s what makes everything work together, and it comes in two main components:
+
+- The Server: Think of this as the brains of the operation. It’s where all the logic, algorithms, data, and configurations live. It’s in charge of sending signals and controlling all the cool stuff you’ve connected to your setup.
+- The Client: This is what you, the user, interact with on your smartphone, tablet, or computer. The client sends requests to the server—essentially telling it what to do.
+
+<img src="/img/smartdrycure_post6/1.jpeg" style="width: 45%; padding:10px; margin: auto; margin-left: 2% ">
+<img src="/img/smartdrycure_post6/2.jpeg" style="width: 45%; padding:10px; margin: auto;">
+
+<img src="/img/smartdrycure_post6/3.jpeg" style="width: 80%; margin: auto; display: block;">
+
+<hr>
+
+<i>Imagine your setup is a fancy restaurant: </i>
+
+<i>You, the User: You’re at a diner, sitting at the table, looking at the menu, deciding what you want.
+The Server (Software): This is both the waiter and the chef. The waiter takes your request (like setting the humidity) and brings it to the kitchen (the algorithms and logic). The chef (the server’s brains) then prepares your order perfectly and sends it back to you.
+The Client: The menu and your interactions with the waiter—the way you choose what you want and communicate your preferences.
+In simple terms, the client (you) tells the server (the kitchen) what’s needed, and the server makes it happen. Together, they create a seamless experience that’s as smooth as a five-star meal. Bon appétit! </i>
+
+<hr>
+
+Let's break it down to we want in our menu:
+
+- Automated Program Selection (Powered by Science):  
+  Choose from a variety of programs based on solid algorithms like Slope and Dew-Point to set and maintain your ideal temperature and humidity.  
+  Whether you're Drying, Curing, or just Holding, pick your program, hit "Start," and let the magic happen.
+
+  <img src="/img/smartdrycure_post6/4.png" style="width: 48%; padding:10px; margin: auto; margin-left: 2% ">
+  <img src="/img/smartdrycure_post6/5.png" style="width: 48%; padding:10px; margin: auto;">
+
+- Real-Time Monitoring:
+  Stay in the loop with stats on - current program, stage, target vs. current temperature, humidity levels, and the status of all connected devices.
+
+    <img src="/img/smartdrycure_post6/6.png" style="width: 80%; margin: auto; display: block;">
+
+- Manual Controls (For the Hands-On Type):
+  Prefer to take control? Adjust temperature, humidity, and fan speed manually whenever you want.
+
+- Historical Data & Logs:
+  Curious about how things have been? View historical data for temperature and humidity over time. Plus, access logs for detailed insights if you need them.
+
+- Settings for Personalization:
+  Customize the app to your preferences because we all like things our way.
+  And also allow OTA updates and factory reset if things goes bad.
+
+  <img src="/img/smartdrycure_post6/7.png" style="width: 80%; margin: auto; display: block;">
+
+- Calibration for Flexibility:
+
+  - No fridge buttons connected? The app will notify you daily with the right target temperature based on the Slope Algorithm.
+  - Not using a humidifier? It’ll remind you to keep a wet sponge inside the fridge to maintain the humidity.
+  - Only have the fridge connected? You’ll get Dew-Point programs that are perfect for your setup.
+
+    <img src="/img/smartdrycure_post6/8.png" style="width: 80%; margin: auto; display: block;">
+    <img src="/img/smartdrycure_post6/9.png" style="width: 45%; padding:10px; margin: auto; margin-left: 2% ">
+    <img src="/img/smartdrycure_post6/10.png" style="width: 45%; padding:10px; margin: auto;">
+
+- Save everything on the memory so it will remember you choices for the next time, or in case of a power outage.
+
+And if you are asking how this thing is connected to my home network - simply on the first time it loads a new WiFi network will pop-up - connect to it from any device, configure it to connect to your home WiFi network, save and that's it! Go to your favorite browser on any device that is connected to your home WiFi and go to <u><i>cannatator.local</i></u>
+You can also go directly to the IP address that will be presented when loading on the small round screen.
+
+ <img src="/img/smartdrycure_post6/11.jpeg" style="width: 80%; margin: auto; display: block;">
+
+And all of this is neatly packaged in a responsive, user-friendly app that works seamlessly across all devices. Simple, effective, and ready to handle whatever drying and curing needs you throw its way with Science.
+
+---
+
+<div style="background: darkgray;padding: 31px;border-radius: 15px;">
+<font style="font-weight: bold">Want the PCB, microcontroller, components, 3D prints and pre-installed software delivered to you?</font>
+<a href="mailto:akerman@duck.com"><u>Send me an email</u></a> or use the <a href="/contact"><u>contact form</u></a>
+</div>
+
+~Tal

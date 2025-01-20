@@ -1,0 +1,54 @@
+---
+layout: post
+title: "Making everything pretty again - Part 2"
+subtitle: "Mounting it all"
+date: 2025-01-18 12:04:00 +0100
+background: /img/posts/1.jpg
+categories: [Smart Drying & Curing System]
+author: Tal Akerman
+project: Smart Drying & Curing System
+---
+
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+Can You Hear It? That’s the Sweet Sound of the Finish Line!
+Get everything that hanging out of the fridge and mount it with a double sided tape to the back of the fridge.
+
+Make sure you’re not blocking any vents, cooling elements, or other components that need breathing room. Good airflow = happy fridge.
+Leave enough slack for easy access, but keep the wires tidy. Cable ties or clips work wonders here.
+
+Take a step back, admire your work, and bask in the glow of your almost-finished masterpiece. Victory is just a few clicks away!
+
+<img src="/img/smartdrycure_post5/1.jpeg" style="width: 80%; margin: auto; display: block;">
+
+\*I've added an external antenna as my fridge is in the basement and the WiFi signal was weak - but that's for a another day.
+
+<img src="/img/smartdrycure_post5/2.jpeg" style="width: 45%; padding:10px; margin: auto; margin-left: 2% ">
+<img src="/img/smartdrycure_post5/3.jpeg" style="width: 45%; padding:10px; margin: auto;">
+
+<img src="/img/smartdrycure_post5/4.jpeg" style="width: 45%; padding:10px; margin: auto; margin-left: 2% ">
+<img src="/img/smartdrycure_post5/5.jpeg" style="width: 45%; padding:10px; margin: auto;">
+
+<img src="/img/smartdrycure_post5/6.jpeg" style="width: 40%; margin: auto; display: block;">
+
+Assuming that you did everything correctly, then the moment you plug in the fridge, everything should work like a charm.
+
+That said... if you’ve accidentally created a time machine disguised as a fridge (and let’s be honest, it’s always a possibility), try not to bring back any creatures from that movie. You know the one. The one with the creatures. And the chaos. And the Time Travel. Yeah, that one.
+
+But hey, if you do find yourself staring down a fridge full of time-traveling chaos, call me. I’ll bring the popcorn.
+
+Now plug it in, cross your fingers (just in case), and get ready to enjoy your science-backed masterpiece! 🚀
+
+Next up - We'll go over the software!
+
+---
+
+<div style="background: darkgray;padding: 31px;border-radius: 15px;">
+<font style="font-weight: bold">Want the PCB, microcontroller, components, 3D prints and pre-installed software delivered to you?</font>
+<a href="mailto:akerman@duck.com"><u>Send me an email</u></a> or use the <a href="/contact"><u>contact form</u></a>
+</div>
+
+~Tal
